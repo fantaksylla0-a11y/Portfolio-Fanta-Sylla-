@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="fr" class="h-full">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fanta Sylla - Portfolio Community Manager & Communication | Paris</title>
+<meta name="description" content="Portfolio de Fanta Sylla, étudiante en BUT Info-Com et Community Manager. Expertises : Stratégie digitale, Création de contenu, Réseaux sociaux. Recherche stage mars-juin 2026.">
+<meta name="keywords" content="Fanta Sylla, Community Manager, Communication, Portfolio, Stage, Paris, Île-de-France, Création de contenu, Digital">
+<meta name="author" content="Fanta Sylla">
+
+<meta property="og:title" content="Fanta Sylla - Portfolio Community Manager">
+<meta property="og:description" content="Découvrez mes réalisations, mes compétences et mon parcours. À la recherche d'un stage pour 2026.">
+<meta property="og:image" content="https://fanta-sylla-portfolio.netlify.app/image/fanta-sylla.jpg">
+<meta property="og:url" content="https://fanta-sylla-portfolio.netlify.app/">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/png" href="fs.png">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="/_sdk/element_sdk.js"></script>
+<style>
+  body {
+    box-sizing: border-box;
+  }
+   :root {
+    --color-background: #FFFFFF;
+    --color-surface: #F8F7FF;
+    --color-text: #2C2416;
+    --color-primary: #B8A4E5;
+    --color-secondary: #9B85C7;
+  }
+   * {
+    font-family: 'Poppins', sans-serif;
+  }
+   .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+   html {
+    scroll-behavior: smooth;
+  }
+   /* Page transitions */
+  .page {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+   .page.active {
+    display: block;
+  }
+   @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+   /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-bottom: 0.15em;
+  }
+   /* Typing cursor animation */
+  .typing-cursor {
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: var(--color-primary);
+    font-weight: 300;
+  }
+   @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+   /* Cards */
+  .card {
+    background: var(--color-surface);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(184, 164, 229, 0.1);
+    transition: all 0.3s ease;
+  }
+   .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(184, 164, 229, 0.2);
+  }
+   /* Buttons */
+  .btn-primary {
+    background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+   .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(184, 164, 229, 0.4);
+  }
+   .btn-secondary {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+  }
+   .btn-secondary:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+  }
+   .btn-small {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.875rem;
+  }
+   /* Skills */
+  .skill-tag {
+    background: rgba(184, 164, 229, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    border: 1px solid rgba(184, 164, 229, 0.3);
+    transition: all 0.3s ease;
+  }
+   .skill-tag:hover {
+    background: rgba(184, 164, 229, 0.2);
+    transform: scale(1.05);
+  }
+   /* Timeline */
+  .timeline-item {
+    position: relative;
+    padding-left: 2.5rem;
+    padding-bottom: 2rem;
+  }
+   .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--color-primary) 0%, transparent 100%);
+  }
+   .timeline-dot {
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    box-shadow: 0 0 0 4px var(--color-background);
+  }
+   /* Project cards */
+  .project-card {
+    background: var(--color-surface);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(184, 164, 229, 0.1);
+  }
+   .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 48px rgba(184, 164, 229, 0.25);
+  }
+   .project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+   .project-card:hover .project-image {
+    transform: scale(1.1);
+  }
+   /* Mobile menu */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-background);
+    z-index: 100;
+    padding: 2rem;
+  }
+   .mobile-menu.active {
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease-out;
+  }
+   @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+   /* Photo placeholder */
+  .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-surface) 0%, #E8E0F7 100%);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--color-primary);
+  }
+  
+  /* Modale images */
+  #imageModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  /* NOUVEAU STYLE POUR LE BOUTON TELEPHONE */
+  .btn-phone {
+    min-width: 220px; /* Largeur fixe pour éviter que le bouton ne bouge */
+  }
+  .btn-phone .phone-number {
+    display: none;
+  }
+  .btn-phone:hover .text-default {
+    display: none;
+  }
+  .btn-phone:hover .phone-number {
+    display: inline;
+  }
+</style>
+<style>@view-transition { navigation: auto; }</style>
+<script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+</head>
+<body class="h-full" style="background-color: var(--color-background); color: var(--color-text);">
+
+<div id="app-wrapper" class="w-full h-full overflow-auto">
+
+<nav class="sticky top-0 left-0 right-0 z-50 px-6 py-4" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(184, 164, 229, 0.2);">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <a href="#" onclick="showPage('home'); return false;" class="font-display text-2xl font-bold gradient-text">FS</a>
+    
+    <div class="hidden md:flex space-x-8 text-sm font-medium">
+      <a href="#" onclick="goToSection('about'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">À propos</a> 
+      <a href="#" onclick="goToSection('skills'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Compétences</a> 
+      <a href="#" onclick="goToSection('projects'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Réalisations</a> 
+      <a href="#" onclick="goToSection('experience'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Expériences</a> 
+      <a href="#" onclick="goToSection('formations'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Formations</a>
+    </div>
+
+    <button id="mobile-menu-btn" class="md:hidden p-2">
+      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="6" x2="20" y2="6"></line> <line x1="4" y1="12" x2="20" y2="12"></line> <line x1="4" y1="18" x2="20" y2="18"></line></svg>
+    </button>
+  </div>
+ </nav>
+
+ <div id="mobile-menu" class="mobile-menu">
+  <button id="close-menu" class="self-end mb-8">
+   <svg width="32" height="32" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <div class="flex flex-col space-y-6 text-xl font-medium">
+    <a href="#" onclick="goToSection('about'); closeMobileMenu(); return false;" style="color: var(--color-text);">À propos</a> 
+    <a href="#" onclick="goToSection('skills'); closeMobileMenu(); return false;" style="color: var(--color-text);">Compétences</a> 
+    <a href="#" onclick="goToSection('projects'); closeMobileMenu(); return false;" style="color: var(--color-text);">Réalisations</a> 
+    <a href="#" onclick="goToSection('experience'); closeMobileMenu(); return false;" style="color: var(--color-text);">Expériences</a> 
+    <a href="#" onclick="goToSection('formations'); closeMobileMenu(); return false;" style="color: var(--color-text);">Formations</a>
+  </div>
+ </div>
+
+ <div id="home-page" class="page active">
+  <section id="hero" class="flex items-center justify-center px-6 pt-10 pb-20">
+   <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+     <div>
+      <h1 id="hero-name" class="font-display text-5xl md:text-7xl font-bold mb-10 gradient-text block" style="line-height: 1.2;">Fanta Sylla</h1>
+      <p id="hero-subtitle" class="text-xl md:text-2xl mb-6" style="color: var(--color-secondary);">Aspiring communicante, en Bac+3</p>
+      <div class="mb-8">
+       <p class="text-lg md:text-xl">Je suis <span id="typing-text" class="gradient-text font-semibold"></span><span class="typing-cursor">|</span></p>
+      </div>
+      <div class="card mb-10">
+       <p id="stage-info" class="text-lg">À la recherche d'un stage, du 16 mars au 19 juin 2026</p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#" onclick="goToSection('about'); return false;" class="btn-primary text-center">Découvrir mon parcours</a> 
+        <a href="#" onclick="goToSection('contact'); return false;" class="btn-secondary text-center">Me contacter</a>
+      </div>
+     </div>
+     <div class="flex justify-center">
+      <div style="width: 320px; height: 400px;"><img src="image/fanta-sylla.jpg" alt="Fanta Sylla" class="w-full h-full object-cover rounded-3xl shadow-2xl border-3" style="border: 3px solid var(--color-primary);" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+       <div class="photo-placeholder" style="display: none;">
+        <div class="text-center p-6">
+         <svg class="w-20 h-20 mx-auto mb-4" style="color: var(--color-primary);" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+         <p class="text-sm font-medium" style="color: var(--color-secondary);">Votre photo ici</p>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+  
+  <section id="about" class="py-20 px-6">
+   <div class="max-w-4xl mx-auto">
+    <h2 id="about-title" class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Qui suis-je ?</h2>
+    <div class="card space-y-6 text-lg leading-relaxed">
+     <p>Passionnée par la communication et le digital, j'ai choisi de développer mes compétences à travers mes études en BUT Information-Communication, ainsi que mes expériences en agence, média et entreprise.</p>
+     <p>Au fil de mes projets, j'ai pu explorer plusieurs facettes de la communication :</p>
+     <ul class="space-y-3 pl-5">
+      <li>• Community management et animation de réseaux sociaux (TikTok, Instagram, YouTube)</li>
+      <li>• Création de contenus visuels et vidéos adaptés aux tendances</li>
+      <li>• Stratégie éditoriale et campagnes d'influence</li>
+      <li>• Branding et communication digitale</li>
+     </ul>
+     <p class="italic" style="color: var(--color-secondary);">Ce portfolio regroupe certaines de mes réalisations, qui reflètent à la fois ma créativité, ma polyvalence et ma volonté d'apprendre et d'évoluer dans ce domaine.</p>
+    </div>
+    <div class="text-center mt-8">
+     <a href="image/cv-stage-sylla-fanta.pdf" target="_blank" class="btn-primary">
+      <span id="cv-button-text">Télécharger mon CV</span>
+     </a>
+    </div>
+   </div>
+  </section>
+
+   <section id="skills" class="py-20 px-6" style="background: var(--color-surface);">
+   <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes compétences</h2>
+    <div class="flex flex-wrap justify-center gap-4">
+     <div class="skill-tag">Conception de stratégies</div>
+     <div class="skill-tag">Rédaction</div>
+     <div class="skill-tag">Gestion de projets</div>
+     <div class="skill-tag">PAO</div>
+     <div class="skill-tag">Réseaux sociaux</div>
+     <div class="skill-tag">Prospection</div>
+     <div class="skill-tag">Veille</div>
+     <div class="skill-tag">Supports écrits et audiovisuels</div>
+     <div class="skill-tag">SEO</div>
+     <div class="skill-tag">Google Analytics</div>
+     <div class="skill-tag">Community Management</div>
+     <div class="skill-tag">Création de contenu</div>
+     <div class="skill-tag">Montage vidéo</div>
+     <div class="skill-tag">Stratégie d'influence</div>
+     <div class="skill-tag">Relations presse</div>
+     <div class="skill-tag">Branding</div>
+    </div>
+   </div>
+  </section>
+
+   <section id="projects" class="py-20 px-6" style="background: var(--color-background);">
+   <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes réalisations</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+     <div class="card cursor-pointer" onclick="goToSection('experience')">
+      <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);">
+       <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+      </div>
+      <h3 class="font-display text-2xl md:text-3xl font-bold mb-4">Réalisations en entreprise</h3>
+      <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Découvrez les projets concrets réalisés lors de mes stages en agence, média et entreprise.</p><span class="inline-flex items-center font-semibold" style="color: var(--color-primary);"> Explorer <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></span>
+     </div>
+     
+     <div class="card cursor-pointer" onclick="showPage('academic');">
+      <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);">
+       <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+      </div>
+      <h3 class="font-display text-2xl md:text-3xl font-bold mb-4">Projets académiques</h3>
+      <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Une sélection de projets réalisés dans le cadre de ma formation en BUT Information-Communication.</p><span class="inline-flex items-center font-semibold" style="color: var(--color-primary);"> Explorer <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></span>
+     </div>
+    </div>
+   </div>
+  </section>
+
+   <section id="experience" class="py-20 px-6" style="background: var(--color-surface);">
+   <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes expériences</h2>
+    <div class="space-y-0">
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2025</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Stagiaire Community Manager</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">Communik</p>
+       <ul class="space-y-2 text-sm mb-6">
+        <li>• Réalisation de prises de vue pour des contenus destinés aux réseaux sociaux</li>
+        <li>• Montage vidéo adapté aux formats courts et aux tendances digitales</li>
+        <li>• Création de publications et rédaction de captions optimisées</li>
+        <li>• Participation à des tournages en tant que figurante</li>
+        <li>• Contribution à la stratégie de diffusion de contenus</li>
+       </ul><button onclick="showPage('communik')" class="btn-primary btn-small">Voir plus</button>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Depuis Décembre 2023</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Community Manager</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">Marana TV</p>
+       <ul class="space-y-2 text-sm mb-6">
+        <li>• Réalisation de planning éditorial</li>
+        <li>• Veille concurrentielle</li>
+        <li>• Analyse des performances des réseaux sociaux</li>
+        <li>• Animation et modération de la communauté</li>
+        <li>• Recherche et gestion de partenariats</li>
+       </ul><button onclick="showPage('marana')" class="btn-primary btn-small">Voir plus</button>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2024</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Stagiaire Chargée de communication externe</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">FM Cosmetics</p>
+       <ul class="space-y-2 text-sm mb-6">
+        <li>• Production de contenus</li>
+        <li>• Développement de stratégie de communication digitale et d'influence</li>
+        <li>• Analyse du marché et veille concurrentielle</li>
+        <li>• Optimisation SEO du site internet</li>
+       </ul><button onclick="showPage('fmcosmetics')" class="btn-primary btn-small">Voir plus</button>
+      </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">2018</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Stage d'observation</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">Dare.WIN</p>
+       <ul class="space-y-2 text-sm">
+        <li>• Observation et participation aux réunions d'équipe</li>
+        <li>• Observation du processus de création de contenu</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+   <section id="formations" class="py-20 px-6" style="background: var(--color-background);">
+   <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes formations</h2>
+    <div class="space-y-6">
+     <div class="card" style="background: var(--color-surface);">
+      <div class="flex flex-wrap items-start gap-4">
+       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%); color: white;">En cours</div>
+       <div class="flex-1">
+        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Information Communication</h3>
+        <p class="mb-4" style="color: var(--color-secondary);">IUT de Montreuil, Université Paris 8</p>
+        <p class="text-sm leading-relaxed">Cette formation m’a apporté une maîtrise des fondamentaux de la communication stratégique, du branding et de la création de contenus, ainsi que la capacité à concevoir et piloter des dispositifs de communication cohérents.</p>
+       </div>
+      </div>
+     </div>
+     <div class="card" style="background: var(--color-surface);">
+      <div class="flex flex-wrap items-start gap-4">
+       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(184, 164, 229, 0.2); color: var(--color-secondary);">2022 - 2023</div>
+       <div class="flex-1">
+        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Techniques de Commercialisation </h3>
+        <p class="mb-4" style="color: var(--color-secondary);">IUT de Ville d'Avray, Université Paris 10</p>
+        <p class="text-sm leading-relaxed">Cette formation m’a permis d’acquérir une compréhension des enjeux commerciaux et marketing, d’analyser les marchés et les cibles, et d’intégrer une logique orientée performance dans les projets.</p>
+       </div>
+      </div>
+     </div>
+     <div class="card" style="background: var(--color-surface);">
+      <div class="flex flex-wrap items-start gap-4">
+       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(184, 164, 229, 0.2); color: var(--color-secondary);">2019 - 2022</div>
+       <div class="flex-1">
+        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">Baccalauréat STMG option marketing, mention Bien</h3>
+        <p style="color: var(--color-secondary);">Lycée Elisa Lemonnier, Paris 12</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+  <section id="contact" class="py-20 px-6" style="background: var(--color-surface);">
+   <div class="max-w-4xl mx-auto text-center">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-8 gradient-text">Travaillons ensemble</h2>
+    <p class="text-lg md:text-xl mb-12" style="color: var(--color-secondary);">Vous avez une opportunité de stage ou un projet à me proposer ? N'hésitez pas à me contacter.</p>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center">
+      <a href="mailto:Syllafanta.pro@gmail.com" class="btn-primary"> M'envoyer un email </a> 
+      
+      <a href="tel:0651459573" class="btn-secondary btn-phone">
+        <span class="text-default">Me téléphoner</span>
+        <span class="phone-number">06 51 45 95 73</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/fanta-pro" target="_blank" rel="noopener noreferrer" class="btn-secondary"> LinkedIn </a>
+    </div>
+   </div>
+  </section>
+
+   <footer class="py-10 px-6 text-center" style="border-top: 1px solid rgba(184, 164, 229, 0.2); background: var(--color-background);">
+   <p class="text-sm" style="color: var(--color-secondary);">Fanta Sylla - Portfolio 2025</p>
+  </footer>
+ </div>
+
+ <div id="communik-page" class="page">
+  <div class="fixed top-24 left-6 z-40">
+    <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg> Retour 
+    </button>
+  </div>
+
+  <section class="py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 gradient-text">Stage chez Communik</h1>
+        <p class="text-lg max-w-3xl mx-auto leading-relaxed" style="color: var(--color-secondary);">Mai - Juin 2025 • Stagiaire Community Manager</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="card mb-8">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">Mes missions</h2>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Réalisation de prises de vue pour des contenus destinés aux réseaux sociaux</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Montage vidéo adapté aux formats courts et aux tendances digitales</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Création de publications et rédaction de captions optimisées</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Participation à des tournages en tant que figurante</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Contribution à la stratégie de diffusion de contenus</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">À propos de Communik</h2>
+          <p class="text-lg leading-relaxed mb-6">Communik est une agence de communication digitale spécialisée dans la création de contenus pour les réseaux sociaux. L'agence accompagne ses clients dans leur stratégie digitale et la production de contenus engageants.</p>
+          <p class="text-lg leading-relaxed">Mon stage chez Communik m'a permis de développer mes compétences en community management et en création de contenus, tout en découvrant les coulisses de la production audiovisuelle pour les réseaux sociaux.</p>
+        </div>
+
+        <div class="mt-12">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes réalisations</h2>
+          
+      <div class="card mb-8">
+  <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">📱 Stories Instagram</h3>
+  
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+    <img src="image/story-omelette.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+    
+    <img src="image/story-communik.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+    
+    <img src="image/story-communik-2.png" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+    
+    <img src="image/story-communik-3.png" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+    
+    <img src="image/story-communik-4.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+    
+    <img src="image/story-communik-5.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+    
+    <img src="image/story-communik-6.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+
+  </div>
+</div>
+          <div class="card">
+            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">🎬 Contenus TikTok & Reels</h3>
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-communik-1.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-communik-2.mov" type="video/quicktime">
+                </video>
+              </div>
+
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-communik-3.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-communik-4.mov" type="video/quicktime">
+                </video>
+              </div>
+
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-communik-5.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-communik-6.mov" type="video/quicktime">
+                </video>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+ <div id="marana-page" class="page">
+  <div class="fixed top-20 left-6 z-40">
+    <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg> Retour 
+    </button>
+  </div>
+
+  <section class="py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 gradient-text">Marana TV</h1>
+        <p class="text-lg max-w-3xl mx-auto leading-relaxed" style="color: var(--color-secondary);">Depuis Décembre 2023 • Community Manager</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="card mb-8">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">Mes missions</h2>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Réalisation de planning éditorial</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Veille concurrentielle</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Analyse des performances des réseaux sociaux</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Animation et modération de la communauté</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Recherche et gestion de partenariats</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">À propos de Marana TV</h2>
+          <p class="text-lg leading-relaxed mb-6">Marana TV est une chaîne YouTube consacrée à la mode, la santé et le bien-être. En tant que Community Manager, j'accompagne le développement de la communauté et l'animation des réseaux sociaux de la chaîne.</p>
+          <p class="text-lg leading-relaxed">Mon rôle consiste à créer une stratégie de contenu cohérente, à analyser les performances et à développer l'engagement de la communauté à travers différentes plateformes sociales.</p>
+        </div>
+
+        <div class="mt-12">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes réalisations</h2>
+          <div class="card">
+            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">📹 Contenus Instagram</h3>
+            <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Création et montage de vidéos pour alimenter le compte Instagram de Marana TV</p>
+            
+            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-marana-1.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-marana-2.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-marana-3.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-marana-4.mp4" type="video/mp4">
+                </video>
+              </div>
+
+              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-marana-5.mp4" type="video/mp4">
+                </video>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+ <div id="fmcosmetics-page" class="page">
+  <div class="fixed top-20 left-6 z-40">
+    <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg> Retour
+    </button>
+  </div>
+
+  <section class="pt-10 pb-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 gradient-text">Stage chez FM Cosmetics</h1>
+        <p class="text-lg max-w-3xl mx-auto leading-relaxed" style="color: var(--color-secondary);">Mai - Juin 2024 • Stagiaire Chargée de communication externe</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="card mb-8">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">Mes missions</h2>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Production de contenus</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Développement de stratégie de communication digitale et d'influence</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Analyse du marché et veille concurrentielle</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span> <span>Optimisation SEO du site internet</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">À propos de FM Cosmetics</h2>
+          <p class="text-lg leading-relaxed mb-6">FM Cosmetics est une entreprise spécialisée dans les produits cosmétiques et de beauté. Mon stage m'a permis de travailler sur la stratégie de communication digitale de l'entreprise et de créer des contenus variés pour développer sa présence en ligne.</p>
+          <p class="text-lg leading-relaxed">J'ai pu mettre en pratique mes compétences en création de contenu, stratégie digitale et optimisation SEO tout en contribuant au développement de la marque sur les réseaux sociaux.</p>
+        </div>
+
+        <div class="mt-12">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes réalisations</h2>
+          
+          <div class="card mb-8">
+            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">🎥 Contenus vidéo Instagram &amp; TikTok</h3>
+            <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Création et montage de vidéos pour alimenter les comptes Instagram et TikTok de FM Cosmetics</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="rounded-xl overflow-hidden shadow-lg bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-fm-1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="rounded-xl overflow-hidden shadow-lg bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-fm-2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="rounded-xl overflow-hidden shadow-lg bg-black h-80">
+                <video controls class="w-full h-full object-cover">
+                  <source src="videos/video-fm-3.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">📧 Newsletter</h3>
+            <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Conception et rédaction d'une newsletter pour la communication client de FM Cosmetics</p>
+            <div class="cursor-pointer" onclick="openModal('image/newsletter.png')">
+              <img src="image/newsletter.png" alt="Newsletter FM Cosmetics" class="w-full max-w-2xl mx-auto rounded-xl shadow-lg hover:scale-105 transition-transform">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center p-4" onclick="closeModal()">
+       <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-gray-300 z-60">
+           <svg width="40" height="40" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg>
+       </button>
+       <img id="modalImage" src="" alt="Réalisation" class="max-w-full max-h-full object-contain rounded-lg" onclick="event.stopPropagation()">
+</div>
+
+<div id="academic-page" class="page">
+   <div class="fixed top-24 left-6 z-40">
+     <button onclick="goToSection('projects')" class="btn-secondary flex items-center">
+       <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+       </svg> Retour
+     </button>
+   </div>
+   <section class="pt-24 pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+     <div class="text-center mb-16">
+      <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 gradient-text">Projets universitaires</h1>
+      <p class="text-lg max-w-3xl mx-auto leading-relaxed" style="color: var(--color-secondary);">Tout au long de mes formations, j'ai eu l'opportunité de travailler sur de nombreux projets variés, tant individuels qu'en équipe. Ces expériences concrètes m'ont permis de développer des compétences pratiques et de me familiariser avec les différents aspects de la communication.</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div class="project-card">
+       <div class="overflow-hidden" style="height: 250px; background: linear-gradient(135deg, #F8F7FF 0%, #E8E0F7 100%);">
+        <img src="image/projet5.jpeg" alt="Challenge Verifone" class="project-image" onerror="this.style.display='none'">
+       </div>
+       <div class="p-6">
+        <h3 class="font-display text-xl font-bold mb-3">Challenge Communication Locale - Verifone</h3>
+        <p class="text-sm mb-5 leading-relaxed" style="color: var(--color-secondary);">Mon équipe et moi avons remporté le Challenge de la Communication Locale, développant une stratégie innovante pour Verifone.</p><a href="https://drive.google.com/file/d/1XKp1RCb6Pmxl0vl_gsq8wT_F4JZ5-gAj/view?usp=share_link" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2 px-4"> Découvrir le projet </a>
+       </div>
+      </div>
+
+      <div class="project-card">
+       <div class="overflow-hidden" style="height: 250px; background: linear-gradient(135deg, #F8F7FF 0%, #E8E0F7 100%);">
+        <img src="image/projet6.png" alt="Kreden Sneakers" class="project-image" onerror="this.style.display='none'">
+       </div>
+       <div class="p-6">
+        <h3 class="font-display text-xl font-bold mb-3">Projet Branding - Kreden Sneakers</h3>
+        <p class="text-sm mb-5 leading-relaxed" style="color: var(--color-secondary);">Projet de branding fictif pour Kreden, une marque de sneakers haut de gamme. Recommandation stratégique complète.</p><a href="https://www.canva.com/design/DAG9899f-EA/P_idOXeVG9rbuKO9R2mEwg/edit?utm_content=DAG9899f-EA&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2 px-4"> Découvrir le projet </a>
+       </div>
+      </div>
+
+      <div class="project-card">
+       <div class="overflow-hidden" style="height: 250px; background: linear-gradient(135deg, #F8F7FF 0%, #E8E0F7 100%);">
+        <img src="image/projet1.png" alt="UrbnVibes" class="project-image" onerror="this.style.display='none'">
+       </div>
+       <div class="p-6">
+        <h3 class="font-display text-xl font-bold mb-3">Magazine Digital - Urb'Vibes</h3>
+        <p class="text-sm mb-5 leading-relaxed" style="color: var(--color-secondary);">Création d'un magazine digital collectif. Conception du logo et rédaction d'un article sur Monsieur Nov.</p><a href="https://www.urbvibes.atelier.xzstudio.fr/2024/04/monsieur-nov/" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2 px-4"> Découvrir le projet </a>
+       </div>
+      </div>
+
+      <div class="project-card">
+       <div class="overflow-hidden" style="height: 250px; background: linear-gradient(135deg, #F8F7FF 0%, #E8E0F7 100%);">
+        <img src="image/projet2.png" alt="Campagne Santé" class="project-image" onerror="this.style.display='none'">
+       </div>
+       <div class="p-6">
+        <h3 class="font-display text-xl font-bold mb-3">Campagne de Sensibilisation - Addiction aux Jeux Vidéo</h3>
+        <p class="text-sm mb-5 leading-relaxed" style="color: var(--color-secondary);">Campagne audiovisuelle pour Santé Publique France sur l'addiction aux jeux vidéo.</p><a href="https://www.canva.com/design/DAGdeRZLZ18/sC8G1Alua33Nngr8FqSCKQ/edit?utm_content=DAGdeRZLZ18&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2 px-4"> Découvrir le projet </a>
+       </div>
+      </div>
+
+      <div class="project-card">
+       <div class="overflow-hidden" style="height: 250px; background: linear-gradient(135deg, #F8F7FF 0%, #E8E0F7 100%);">
+        <img src="image/projet3.png" alt="Kamel Haddad" class="project-image" onerror="this.style.display='none'">
+       </div>
+       <div class="p-6">
+        <h3 class="font-display text-xl font-bold mb-3">Campagne Politique Fictive - Kamel Haddad</h3>
+        <p class="text-sm mb-5 leading-relaxed" style="color: var(--color-secondary);">Stratégie de communication et dimension événementielle pour une campagne politique fictive.</p><a href="https://www.canva.com/design/DAG99Pn6A44/71I8EAzI2AWIv2woDsV8IA/edit?utm_content=DAG99Pn6A44&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=sharebutton" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2 px-4"> Découvrir le projet </a>
+       </div>
+      </div>
+
+      <div class="project-card">
+       <div class="overflow-hidden" style="height: 250px; background: linear-gradient(135deg, #F8F7FF 0%, #E8E0F7 100%);">
+        <img src="image/projet4.png" alt="YSL" class="project-image" onerror="this.style.display='none'">
+       </div>
+       <div class="p-6">
+        <h3 class="font-display text-xl font-bold mb-3">Publicité Vidéo - Mon Paris YSL</h3>
+        <p class="text-sm mb-5 leading-relaxed" style="color: var(--color-secondary);">Publicité vidéo fictive pour le parfum Mon Paris d'Yves Saint Laurent. Scénario et direction artistique.</p><a href="https://imgur.com/bLE2FEy" target="_blank" rel="noopener noreferrer" class="btn-primary text-sm py-2 px-4"> Découvrir le projet </a>
+       </div>
+      </div>
+
+     </div>
+    </div>
+   </section>
+  </div>
+ </div>
+
+<script>
+  const defaultConfig = {
+    hero_name: 'Fanta Sylla',
+    hero_subtitle: 'Aspiring communicante, en Bac+3',
+    stage_info: 'À la recherche d\'un stage, du 16 mars au 19 juin 2026',
+    about_title: 'Qui suis-je ?',
+    cv_button_text: 'Télécharger mon CV',
+    background_color: '#FFFFFF',
+    surface_color: '#F8F7FF',
+    text_color: '#2C2416',
+    primary_color: '#B8A4E5',
+    secondary_color: '#9B85C7'
+  };
+   const typingWords = ['étudiante', 'polyvalente', 'ambitieuse', 'créative', 'persévérante', 'sérieuse', 'curieuse', 'motivée'];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+   function typeAnimation() {
+    const typingElement = document.getElementById('typing-text');
+    if (!typingElement) return;
+  
+    const currentWord = typingWords[wordIndex];
+  
+    if (isDeleting) {
+      typingElement.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+    } else {
+      typingElement.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+    }
+  
+    let speed = isDeleting ? 50 : 100;
+  
+    if (!isDeleting && charIndex === currentWord.length) {
+      speed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % typingWords.length;
+      speed = 500;
+    }
+  
+    setTimeout(typeAnimation, speed);
+  }
+   setTimeout(typeAnimation, 1000);
+
+   /* FONCTIONS DE NAVIGATION CORRIGÉES */
+   function showPage(pageName) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
+    
+    const targetPage = document.getElementById(pageName + '-page');
+    if (targetPage) {
+      targetPage.classList.add('active');
+      // Scroll le wrapper principal en haut
+      const wrapper = document.getElementById('app-wrapper');
+      if (wrapper) wrapper.scrollTo(0, 0);
+      window.scrollTo(0, 0);
+    }
+  }
+
+  // NOUVELLE FONCTION POUR GERER LE SCROLL VERS UNE SECTION
+  function goToSection(sectionId) {
+      // 1. Revenir à la page d'accueil si on n'y est pas
+      const homePage = document.getElementById('home-page');
+      if (!homePage.classList.contains('active')) {
+          showPage('home');
+      }
+      
+      // 2. Attendre un tout petit peu que la page s'affiche, puis scroller
+      setTimeout(() => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+              section.scrollIntoView({ behavior: 'smooth' });
+          }
+      }, 100);
+  }
+
+   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenuBtn = document.getElementById('close-menu');
+   if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('active'); });
+  }
+   if (closeMenuBtn) {
+    closeMenuBtn.addEventListener('click', () => { mobileMenu.classList.remove('active'); });
+  }
+   function closeMobileMenu() {
+    mobileMenu.classList.remove('active');
+  }
+   function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    if (modal && modalImage) {
+      modalImage.src = imageSrc;
+      modal.style.display = 'flex';
+    }
+  }
+   function closeModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+  
+  function closeModalFM() {
+    const modal = document.getElementById('imageModalFM');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+
+   async function onConfigChange(config) {
+    const heroName = document.getElementById('hero-name');
+    const heroSubtitle = document.getElementById('hero-subtitle');
+    const stageInfo = document.getElementById('stage-info');
+    const aboutTitle = document.getElementById('about-title');
+    const cvButtonText = document.getElementById('cv-button-text');
+  
+    if (heroName) heroName.textContent = config.hero_name || defaultConfig.hero_name;
+    if (heroSubtitle) heroSubtitle.textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+    if (stageInfo) stageInfo.textContent = config.stage_info || defaultConfig.stage_info;
+    if (aboutTitle) aboutTitle.textContent = config.about_title || defaultConfig.about_title;
+    if (cvButtonText) cvButtonText.textContent = config.cv_button_text || defaultConfig.cv_button_text;
+  
+    const root = document.documentElement;
+    root.style.setProperty('--color-background', config.background_color || defaultConfig.background_color);
+    root.style.setProperty('--color-surface', config.surface_color || defaultConfig.surface_color);
+    root.style.setProperty('--color-text', config.text_color || defaultConfig.text_color);
+    root.style.setProperty('--color-primary', config.primary_color || defaultConfig.primary_color);
+    root.style.setProperty('--color-secondary', config.secondary_color || defaultConfig.secondary_color);
+  }
+   function mapToCapabilities(config) {
+    return {
+      recolorables: [
+        { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; if (window.elementSdk) window.elementSdk.setConfig({ background_color: v }); } },
+        { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; if (window.elementSdk) window.elementSdk.setConfig({ surface_color: v }); } },
+        { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; if (window.elementSdk) window.elementSdk.setConfig({ text_color: v }); } },
+        { get: () => config.primary_color || defaultConfig.primary_color, set: (v) => { config.primary_color = v; if (window.elementSdk) window.elementSdk.setConfig({ primary_color: v }); } },
+        { get: () => config.secondary_color || defaultConfig.secondary_color, set: (v) => { config.secondary_color = v; if (window.elementSdk) window.elementSdk.setConfig({ secondary_color: v }); } }
+      ],
+      borderables: [],
+      fontEditable: undefined,
+      fontSizeable: undefined
+    };
+  }
+   function mapToEditPanelValues(config) {
+    return new Map([
+      ['hero_name', config.hero_name || defaultConfig.hero_name],
+      ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
+      ['stage_info', config.stage_info || defaultConfig.stage_info],
+      ['about_title', config.about_title || defaultConfig.about_title],
+      ['cv_button_text', config.cv_button_text || defaultConfig.cv_button_text]
+    ]);
+  }
+   if (window.elementSdk) {
+    window.elementSdk.init({ defaultConfig, onConfigChange, mapToCapabilities, mapToEditPanelValues });
+  } else {
+    onConfigChange(defaultConfig);
+  }
+</script>
+</body>
+</html>
