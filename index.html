@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://fanta-sylla-portfolio.netlify.app/">
 <meta property="og:type" content="website">
 
-<link rel="icon" type="image/png" href="fs.png">
+<link rel="icon" type="image/png" href="FS-logo.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <script src="/_sdk/element_sdk.js"></script>
@@ -127,14 +127,14 @@
   }
    /* Skills */
   .skill-tag {
-    background: rgba(184, 164, 229, 0.1);
+    background: linear-gradient(135deg, rgba(184, 164, 229, 0.15) 0%, rgba(155, 133, 199, 0.15) 100%);
     padding: 0.75rem 1.5rem;
     border-radius: 30px;
     border: 1px solid rgba(184, 164, 229, 0.3);
     transition: all 0.3s ease;
   }
    .skill-tag:hover {
-    background: rgba(184, 164, 229, 0.2);
+    background: rgba(184, 164, 229, 0.1);
     transform: scale(1.05);
   }
    /* Timeline */
@@ -220,7 +220,7 @@
     border: 3px solid var(--color-primary);
   }
   
-  /* Modale images */
+  /* Modal images */
   #imageModal {
     display: none;
     position: fixed;
@@ -232,9 +232,9 @@
     padding: 1rem;
   }
 
-  /* NOUVEAU STYLE POUR LE BOUTON TELEPHONE */
+  /* Button phone */
   .btn-phone {
-    min-width: 220px; /* Largeur fixe pour éviter que le bouton ne bouge */
+    min-width: 220px;
   }
   .btn-phone .phone-number {
     display: none;
@@ -245,15 +245,352 @@
   .btn-phone:hover .phone-number {
     display: inline;
   }
+
+  /* New styles for testimonials */
+  .testimonial-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(184, 164, 229, 0.15);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(184, 164, 229, 0.2);
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(184, 164, 229, 0.25);
+  }
+  
+  .company-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    background: rgba(184, 164, 229, 0.1);
+    border-radius: 15px;
+  }
+  
+  .company-name {
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--color-secondary);
+    text-align: center;
+  }
+  
+  /* Fun fact button */
+  .fun-fact-btn {
+    background: linear-gradient(135deg, #9B85C7 0%, #B8A4E5 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  
+  .fun-fact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(184, 164, 229, 0.4);
+  }
+  
+  /* Slideshow */
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .slide img:hover {
+    transform: scale(1.02);
+  }
+  
+  .slide-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  .slide-nav:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .prev-slide {
+    left: 20px;
+  }
+  
+  .next-slide {
+    right: 20px;
+  }
+  
+  .slide-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dot.active {
+    background: white;
+    transform: scale(1.2);
+  }
+  
+  /* Personal page styles */
+  .passion-card {
+    background: linear-gradient(135deg, rgba(184, 164, 229, 0.1) 0%, rgba(155, 133, 199, 0.1) 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 2px solid rgba(184, 164, 229, 0.2);
+    transition: all 0.4s ease;
+    height: 100%;
+  }
+  
+  .passion-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 12px 30px rgba(184, 164, 229, 0.2);
+  }
+  
+  .passion-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .passion-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .passion-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Tools Section */
+  .tools-section {
+    margin-top: 3rem;
+  }
+  
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  
+  .tool-item {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(184, 164, 229, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(184, 164, 229, 0.2);
+  }
+  
+  .tool-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(184, 164, 229, 0.2);
+  }
+  
+  .tool-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 auto 1rem;
+  }
+  
+  .tool-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+  }
+  
+  .tool-stars {
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+  }
+  
+  .star {
+    color: #FFD700;
+    font-size: 1.2rem;
+  }
+  
+  /* Dark mode toggle */
+  .theme-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(184, 164, 229, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(184, 164, 229, 0.4);
+  }
+  
+  .theme-toggle svg {
+    color: white;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode {
+    --color-background: #1a1a2e;
+    --color-surface: #16213e;
+    --color-text: #e6e6e6;
+    --color-primary: #9B85C7;
+    --color-secondary: #7A6BA8;
+  }
+  
+  body.dark-mode .card {
+    background: var(--color-surface);
+  }
+  
+  body.dark-mode .testimonial-card {
+    background: #0f3460;
+  }
+  
+  body.dark-mode .tool-item {
+    background: #0f3460;
+  }
+  
+  /* Modal for enlarged images */
+  .enlarged-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .enlarged-modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .enlarged-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+  }
 </style>
 <style>@view-transition { navigation: auto; }</style>
 <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
 </head>
 <body class="h-full" style="background-color: var(--color-background); color: var(--color-text);">
 
+<!-- Theme Toggle Button -->
+<div class="theme-toggle" id="themeToggle">
+  <svg id="themeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path id="themeIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+  </svg>
+</div>
+
+<!-- Modal for enlarged images -->
+<div class="enlarged-modal" id="enlargedModal">
+  <button class="close-modal" onclick="closeEnlargedModal()">×</button>
+  <img id="enlargedImage" src="" alt="Image agrandie">
+</div>
+
 <div id="app-wrapper" class="w-full h-full overflow-auto">
 
-<nav class="sticky top-0 left-0 right-0 z-50 px-6 py-4" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(184, 164, 229, 0.2);">
+<nav class="sticky top-0 left-0 right-0 z-50 px-6 py-4" style="background: rgba(var(--color-background-rgb, 255, 255, 255), 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(184, 164, 229, 0.2);">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
     <a href="#" onclick="showPage('home'); return false;" class="font-display text-2xl font-bold gradient-text">FS</a>
     
@@ -261,8 +598,11 @@
       <a href="#" onclick="goToSection('about'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">À propos</a> 
       <a href="#" onclick="goToSection('skills'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Compétences</a> 
       <a href="#" onclick="goToSection('projects'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Réalisations</a> 
+      <a href="#" onclick="goToSection('testimonials'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Avis</a>
+      <a href="#" onclick="goToSection('tools'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Mes outils</a>
       <a href="#" onclick="goToSection('experience'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Expériences</a> 
       <a href="#" onclick="goToSection('formations'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Formations</a>
+      <a href="#" onclick="showPage('personal'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">En dehors de la com</a>
     </div>
 
     <button id="mobile-menu-btn" class="md:hidden p-2">
@@ -279,8 +619,11 @@
     <a href="#" onclick="goToSection('about'); closeMobileMenu(); return false;" style="color: var(--color-text);">À propos</a> 
     <a href="#" onclick="goToSection('skills'); closeMobileMenu(); return false;" style="color: var(--color-text);">Compétences</a> 
     <a href="#" onclick="goToSection('projects'); closeMobileMenu(); return false;" style="color: var(--color-text);">Réalisations</a> 
+    <a href="#" onclick="goToSection('testimonials'); closeMobileMenu(); return false;" style="color: var(--color-text);">Avis</a>
+    <a href="#" onclick="goToSection('tools'); closeMobileMenu(); return false;" style="color: var(--color-text);">Mes outils</a>
     <a href="#" onclick="goToSection('experience'); closeMobileMenu(); return false;" style="color: var(--color-text);">Expériences</a> 
     <a href="#" onclick="goToSection('formations'); closeMobileMenu(); return false;" style="color: var(--color-text);">Formations</a>
+    <a href="#" onclick="showPage('personal'); closeMobileMenu(); return false;" style="color: var(--color-text);">En dehors de la com</a>
   </div>
  </div>
 
@@ -329,6 +672,9 @@
       <li>• Branding et communication digitale</li>
      </ul>
      <p class="italic" style="color: var(--color-secondary);">Ce portfolio regroupe certaines de mes réalisations, qui reflètent à la fois ma créativité, ma polyvalence et ma volonté d'apprendre et d'évoluer dans ce domaine.</p>
+     <div class="pt-4 text-center">
+        <button onclick="showPage('personal')" class="fun-fact-btn">En dehors de la com, je suis...</button>
+     </div>
     </div>
     <div class="text-center mt-8">
      <a href="image/cv-stage-sylla-fanta.pdf" target="_blank" class="btn-primary">
@@ -381,6 +727,171 @@
       <h3 class="font-display text-2xl md:text-3xl font-bold mb-4">Projets académiques</h3>
       <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Une sélection de projets réalisés dans le cadre de ma formation en BUT Information-Communication.</p><span class="inline-flex items-center font-semibold" style="color: var(--color-primary);"> Explorer <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></span>
      </div>
+    </div>
+   </div>
+  </section>
+
+   <section id="testimonials" class="py-20 px-6" style="background: var(--color-surface);">
+   <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Ils témoignent</h2>
+    <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Découvrez les retours des entreprises avec lesquelles j'ai eu le plaisir de collaborer</p>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Communik Testimonial -->
+      <div class="testimonial-card">
+        <img src="image/logocommunik.png" alt="Communik Logo" class="company-logo mx-auto">
+        <div class="company-name">Communik</div>
+        <p class="text-base italic mb-6 leading-relaxed text-center">« Nous tenons à souligner que Fanta a été une stagiaire particulièrement impliquée et motivée tout au long de son stage. Elle a su rapidement s'adapter à notre environnement de travail et faire preuve d'une grande autonomie dans les missions qui ont été confiées. Nous la remercions pour son engagement et son professionnalisme et nous ne pouvons que lui souhaiter une pleine réussite pour la suite de son parcours. »</p>
+        <div class="text-center">
+          <a href="#" onclick="showPage('communik')" class="btn-primary btn-small">Voir mon stage</a>
+        </div>
+      </div>
+      
+      <!-- FM Cosmetics Testimonial -->
+      <div class="testimonial-card">
+        <img src="image/logofm.png" alt="FM Cosmetics Logo" class="company-logo mx-auto">
+        <div class="company-name">FM Cosmetics</div>
+        <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta est une étudiante ponctuelle et gentille avec une belle capacité d'adaptation. Elle a su nous faire des propositions de communication ainsi que des propositions d'amélioration. Elle avait soif d'apprendre et était à l'écoute. Continue comme ça. »</p>
+        <div class="text-center">
+          <a href="#" onclick="showPage('fmcosmetics')" class="btn-primary btn-small">Voir mon stage</a>
+        </div>
+      </div>
+      
+      <!-- Marana TV Testimonial -->
+      <div class="testimonial-card">
+        <img src="image/logomarana.png" alt="Marana TV Logo" class="company-logo mx-auto">
+        <div class="company-name">Marana TV</div>
+        <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta a été super impliquée et toujours partante. Elle a participé à la création de contenus pour nos réseaux, proposé des idées, aidé à améliorer notre communication et s'est vite intégrée à l'équipe. Curieuse, à l'écoute et sérieuse, elle avait vraiment envie d'apprendre. Son investissement a clairement fait la différence. On lui souhaite que du bon pour la suite!! »</p>
+        <div class="text-center">
+          <a href="#" onclick="showPage('marana')" class="btn-primary btn-small">Voir mon expérience</a>
+        </div>
+      </div>
+    </div>
+   </div>
+  </section>
+
+   <!-- New Tools Section -->
+   <section id="tools" class="py-20 px-6" style="background: var(--color-background);">
+   <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mon Kit de survie de Community Manager</h2>
+    <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Les outils que je maîtrise pour créer, organiser et analyser</p>
+    
+    <div class="tools-grid">
+      <!-- 5 stars -->
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/canva.svg" alt="Canva" class="tool-icon">
+        <div class="tool-name">Canva</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+  <div class="tool-item">
+  <!-- Image SVG locale pour CapCut -->
+  <img src="image/logocapcut.svg" alt="CapCut" class="tool-icon">
+  <div class="tool-name">CapCut</div>
+  <div class="tool-stars">
+    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+  </div>
+</div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/microsoftoffice.svg" alt="Office" class="tool-icon">
+        <div class="tool-name">Suite Office</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/google.svg" alt="Google" class="tool-icon">
+        <div class="tool-name">Google Workplace</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <!-- 4 stars -->
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/trello.svg" alt="Trello" class="tool-icon">
+        <div class="tool-name">Trello</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/wix.svg" alt="Wix" class="tool-icon">
+        <div class="tool-name">Wix</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <!-- 3 stars -->
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/facebook.svg" alt="Meta Business" class="tool-icon">
+        <div class="tool-name">Meta Business</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobepremierepro.svg" alt="Premiere Pro" class="tool-icon">
+        <div class="tool-name">Premiere Pro</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobephotoshop.svg" alt="Photoshop" class="tool-icon">
+        <div class="tool-name">Photoshop</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobeillustrator.svg" alt="Illustrator" class="tool-icon">
+        <div class="tool-name">Illustrator</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mailchimp.svg" alt="Mailchimp" class="tool-icon">
+        <div class="tool-name">Mailchimp</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/wordpress.svg" alt="WordPress" class="tool-icon">
+        <div class="tool-name">WordPress</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/notion.svg" alt="Notion" class="tool-icon">
+        <div class="tool-name">Notion</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
+      
+      <div class="tool-item">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/asana.svg" alt="Asana" class="tool-icon">
+        <div class="tool-name">Asana</div>
+        <div class="tool-stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+      </div>
     </div>
    </div>
   </section>
@@ -459,7 +970,7 @@
        <div class="flex-1">
         <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Information Communication</h3>
         <p class="mb-4" style="color: var(--color-secondary);">IUT de Montreuil, Université Paris 8</p>
-        <p class="text-sm leading-relaxed">Cette formation m’a apporté une maîtrise des fondamentaux de la communication stratégique, du branding et de la création de contenus, ainsi que la capacité à concevoir et piloter des dispositifs de communication cohérents.</p>
+        <p class="text-sm leading-relaxed">Cette formation m'a apporté une maîtrise des fondamentaux de la communication stratégique, du branding et de la création de contenus, ainsi que la capacité à concevoir et piloter des dispositifs de communication cohérents.</p>
        </div>
       </div>
      </div>
@@ -469,7 +980,7 @@
        <div class="flex-1">
         <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Techniques de Commercialisation </h3>
         <p class="mb-4" style="color: var(--color-secondary);">IUT de Ville d'Avray, Université Paris 10</p>
-        <p class="text-sm leading-relaxed">Cette formation m’a permis d’acquérir une compréhension des enjeux commerciaux et marketing, d’analyser les marchés et les cibles, et d’intégrer une logique orientée performance dans les projets.</p>
+        <p class="text-sm leading-relaxed">Cette formation m'a permis d'acquérir une compréhension des enjeux commerciaux et marketing, d'analyser les marchés et les cibles, et d'intégrer une logique orientée performance dans les projets.</p>
        </div>
       </div>
      </div>
@@ -504,10 +1015,98 @@
   </section>
 
    <footer class="py-10 px-6 text-center" style="border-top: 1px solid rgba(184, 164, 229, 0.2); background: var(--color-background);">
-   <p class="text-sm" style="color: var(--color-secondary);">Fanta Sylla - Portfolio 2025</p>
+   <p class="text-sm" style="color: var(--color-secondary);">Fanta Sylla - Portfolio 2026</p>
   </footer>
  </div>
 
+ <!-- Personal Page -->
+ <div id="personal-page" class="page">
+  <div class="fixed top-24 left-6 z-40">
+    <button onclick="showPage('home')" class="btn-secondary flex items-center">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg> Retour 
+    </button>
+  </div>
+
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 gradient-text">En dehors de la communication</h1>
+        <p class="text-lg max-w-3xl mx-auto leading-relaxed" style="color: var(--color-secondary);">Découvrez ce qui m'inspire et nourrit ma créativité au quotidien</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto mb-16">
+        <div class="card">
+          <p class="text-lg leading-relaxed mb-8">
+            En dehors de la communication, je suis une passionnée qui aime comprendre, observer et ressentir. Voyager et découvrir d'autres cultures nourrit ma vision et mon ouverture d'esprit. Je m'intéresse autant à l'histoire et aux faits divers qu'aux coulisses de l'industrie du divertissement.
+          </p>
+          <p class="text-lg leading-relaxed">
+            La cosmétique fait partie intégrante de mon univers : un terrain d'expression, de créativité et d'identité. La musique (plutôt urbaine), elle, est omniprésente, elle accompagne mes journées et façonne mon énergie créative. Curieuse et en mouvement, je transforme ce qui m'inspire en idées, et les idées en projets !
+          </p>
+        </div>
+      </div>
+
+      <!-- Travel Section -->
+      <div class="mb-20">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes voyages</h2>
+        <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Sénégal • Albanie • Grèce • Espagne • Portugal • Annecy</p>
+        
+        <div class="slideshow-container">
+          <!-- Slides will be added dynamically by JavaScript -->
+          <button class="slide-nav prev-slide">‹</button>
+          <button class="slide-nav next-slide">›</button>
+          <div class="slide-dots"></div>
+        </div>
+      </div>
+
+      <!-- Passions Grid -->
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Music Passion -->
+        <div class="passion-card">
+          <div class="passion-icon mx-auto">
+            <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-4 text-center">Musique urbaine</h3>
+          <p class="text-base mb-6 text-center" style="color: var(--color-secondary);">Mon énergie créative au quotidien</p>
+          <img src="image/spotify.png" alt="Spotify" class="passion-image" onclick="openEnlargedModal('image/spotify.png')">
+        </div>
+
+        <!-- Cosmetics Passion -->
+        <div class="passion-card">
+          <div class="passion-icon mx-auto">
+            <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-4 text-center">Cosmétique</h3>
+          <p class="text-base mb-6 text-center" style="color: var(--color-secondary);">Expression, créativité et identité</p>
+          <img src="image/cosmetics.jpg" alt="Cosmetics" class="passion-image" onclick="openEnlargedModal('image/cosmetics.jpg')">
+        </div>
+
+        <!-- Entertainment & History Passion -->
+        <div class="passion-card">
+          <div class="passion-icon mx-auto">
+            <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-4 text-center">Divertissement & Histoire</h3>
+          <p class="text-base mb-6 text-center" style="color: var(--color-secondary);">Les coulisses et les faits historiques</p>
+          <img src="image/youtube.jpg" alt="YouTube" class="passion-image" onclick="openEnlargedModal('image/youtube.jpg')">
+        </div>
+      </div>
+    </div>
+  </section>
+ </div>
+
+ <!-- Rest of the pages (communik, marana, fmcosmetics, academic) remain exactly the same -->
+ <!-- Due to character limit, I'm showing only the modified parts -->
+ <!-- The existing pages (communik-page, marana-page, fmcosmetics-page, academic-page) remain unchanged -->
+
+ <!-- Communik Page -->
  <div id="communik-page" class="page">
   <div class="fixed top-24 left-6 z-40">
     <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
@@ -612,6 +1211,7 @@
   </section>
 </div>
 
+ <!-- Marana Page -->
  <div id="marana-page" class="page">
   <div class="fixed top-20 left-6 z-40">
     <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
@@ -691,6 +1291,7 @@
   </section>
 </div>
 
+ <!-- FM Cosmetics Page -->
  <div id="fmcosmetics-page" class="page">
   <div class="fixed top-20 left-6 z-40">
     <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
@@ -770,6 +1371,7 @@
        <img id="modalImage" src="" alt="Réalisation" class="max-w-full max-h-full object-contain rounded-lg" onclick="event.stopPropagation()">
 </div>
 
+<!-- Academic Page -->
 <div id="academic-page" class="page">
    <div class="fixed top-24 left-6 z-40">
      <button onclick="goToSection('projects')" class="btn-secondary flex items-center">
@@ -865,11 +1467,17 @@
     primary_color: '#B8A4E5',
     secondary_color: '#9B85C7'
   };
-   const typingWords = ['étudiante', 'polyvalente', 'ambitieuse', 'créative', 'persévérante', 'sérieuse', 'curieuse', 'motivée'];
+  
+  const typingWords = ['étudiante', 'polyvalente', 'ambitieuse', 'créative', 'persévérante', 'sérieuse', 'curieuse', 'motivée'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-   function typeAnimation() {
+  
+  // Slideshow variables
+  let currentSlide = 0;
+  let slideInterval;
+  
+  function typeAnimation() {
     const typingElement = document.getElementById('typing-text');
     if (!typingElement) return;
   
@@ -896,16 +1504,25 @@
   
     setTimeout(typeAnimation, speed);
   }
-   setTimeout(typeAnimation, 1000);
+  
+  setTimeout(typeAnimation, 1000);
 
-   /* FONCTIONS DE NAVIGATION CORRIGÉES */
-   function showPage(pageName) {
+  /* FONCTIONS DE NAVIGATION */
+  function showPage(pageName) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.classList.remove('active'));
     
     const targetPage = document.getElementById(pageName + '-page');
     if (targetPage) {
       targetPage.classList.add('active');
+      
+      // Initialize slideshow if on personal page
+      if (pageName === 'personal') {
+        setTimeout(initSlideshow, 100);
+      } else {
+        stopSlideshow();
+      }
+      
       // Scroll le wrapper principal en haut
       const wrapper = document.getElementById('app-wrapper');
       if (wrapper) wrapper.scrollTo(0, 0);
@@ -913,36 +1530,39 @@
     }
   }
 
-  // NOUVELLE FONCTION POUR GERER LE SCROLL VERS UNE SECTION
   function goToSection(sectionId) {
-      // 1. Revenir à la page d'accueil si on n'y est pas
-      const homePage = document.getElementById('home-page');
-      if (!homePage.classList.contains('active')) {
-          showPage('home');
+    // 1. Revenir à la page d'accueil si on n'y est pas
+    const homePage = document.getElementById('home-page');
+    if (!homePage.classList.contains('active')) {
+      showPage('home');
+    }
+    
+    // 2. Attendre un tout petit peu que la page s'affiche, puis scroller
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
       }
-      
-      // 2. Attendre un tout petit peu que la page s'affiche, puis scroller
-      setTimeout(() => {
-          const section = document.getElementById(sectionId);
-          if (section) {
-              section.scrollIntoView({ behavior: 'smooth' });
-          }
-      }, 100);
+    }, 100);
   }
 
-   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const closeMenuBtn = document.getElementById('close-menu');
-   if (mobileMenuBtn) {
+  
+  if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.add('active'); });
   }
-   if (closeMenuBtn) {
+  
+  if (closeMenuBtn) {
     closeMenuBtn.addEventListener('click', () => { mobileMenu.classList.remove('active'); });
   }
-   function closeMobileMenu() {
+  
+  function closeMobileMenu() {
     mobileMenu.classList.remove('active');
   }
-   function openModal(imageSrc) {
+  
+  function openModal(imageSrc) {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
     if (modal && modalImage) {
@@ -950,21 +1570,201 @@
       modal.style.display = 'flex';
     }
   }
-   function closeModal() {
+  
+  function closeModal() {
     const modal = document.getElementById('imageModal');
     if (modal) {
       modal.style.display = 'none';
     }
   }
-  
-  function closeModalFM() {
-    const modal = document.getElementById('imageModalFM');
-    if (modal) {
-      modal.style.display = 'none';
+
+  // Slideshow Functions
+  function initSlideshow() {
+    // Create slide data - removed captions from slides
+    const travelData = [
+      { src: 'image/voyage1.jpg' },
+      { src: 'image/voyage2.jpg' },
+      { src: 'image/voyage3.jpg' },
+      { src: 'image/voyage4.jpg' },
+      { src: 'image/voyage5.jpg' },
+      { src: 'image/voyage6.jpg' },
+      { src: 'image/voyage7.jpg' },
+      { src: 'image/voyage8.jpg' },
+      { src: 'image/voyage9.jpg' },
+      { src: 'image/voyage10.jpg' },
+      { src: 'image/voyage11.jpg' }
+    ];
+
+    const container = document.querySelector('.slideshow-container');
+    if (!container) return;
+
+    // Clear existing slides
+    const existingSlides = container.querySelectorAll('.slide');
+    existingSlides.forEach(slide => slide.remove());
+
+    // Create slides without captions
+    travelData.forEach((item, index) => {
+      const slide = document.createElement('div');
+      slide.className = `slide ${index === 0 ? 'active' : ''}`;
+      slide.innerHTML = `
+        <img src="${item.src}" alt="Voyage ${index + 1}" class="w-full h-full object-cover" onclick="openEnlargedModal('${item.src}')" onerror="this.src='https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+      `;
+      container.insertBefore(slide, container.querySelector('.prev-slide'));
+    });
+
+    // Initialize dots
+    initDots(travelData.length);
+
+    // Start autoplay
+    startSlideshow();
+  }
+
+  function initDots(count) {
+    const dotsContainer = document.querySelector('.slide-dots');
+    if (!dotsContainer) return;
+
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('div');
+      dot.className = `dot ${i === 0 ? 'active' : ''}`;
+      dot.addEventListener('click', () => goToSlide(i));
+      dotsContainer.appendChild(dot);
     }
   }
 
-   async function onConfigChange(config) {
+  function goToSlide(n) {
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (slides.length === 0) return;
+    
+    // Hide current slide
+    slides[currentSlide].classList.remove('active');
+    dots[currentSlide].classList.remove('active');
+    
+    // Calculate new slide index
+    currentSlide = (n + slides.length) % slides.length;
+    
+    // Show new slide
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+    
+    // Restart autoplay timer
+    restartSlideshow();
+  }
+
+  function nextSlide() {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
+    goToSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length === 0) return;
+    goToSlide(currentSlide - 1);
+  }
+
+  function startSlideshow() {
+    if (slideInterval) clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 4000);
+  }
+
+  function stopSlideshow() {
+    if (slideInterval) {
+      clearInterval(slideInterval);
+      slideInterval = null;
+    }
+  }
+
+  function restartSlideshow() {
+    stopSlideshow();
+    startSlideshow();
+  }
+
+  // Enlarged Modal Functions
+  function openEnlargedModal(imageSrc) {
+    const modal = document.getElementById('enlargedModal');
+    const modalImage = document.getElementById('enlargedImage');
+    if (modal && modalImage) {
+      modalImage.src = imageSrc;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeEnlargedModal() {
+    const modal = document.getElementById('enlargedModal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  }
+
+  // Close modal when clicking outside image
+  document.getElementById('enlargedModal')?.addEventListener('click', function(e) {
+    if (e.target === this || e.target.classList.contains('close-modal')) {
+      closeEnlargedModal();
+    }
+  });
+
+  // Dark Mode Functions
+  function toggleDarkMode() {
+    const body = document.body;
+    const themeIcon = document.getElementById('themeIconPath');
+    const isDark = body.classList.toggle('dark-mode');
+    
+    // Update icon
+    if (isDark) {
+      themeIcon.setAttribute('d', 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z');
+    } else {
+      themeIcon.setAttribute('d', 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z');
+    }
+    
+    // Save preference
+    localStorage.setItem('darkMode', isDark);
+  }
+
+  // Initialize dark mode
+  function initDarkMode() {
+    const savedDarkMode = localStorage.getItem('darkMode');
+    const body = document.body;
+    const themeIcon = document.getElementById('themeIconPath');
+    
+    if (savedDarkMode === 'true') {
+      body.classList.add('dark-mode');
+      themeIcon.setAttribute('d', 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z');
+    }
+  }
+
+  // Event Listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
+    const themeToggle = document.getElementById('themeToggle');
+    
+    if (prevBtn) {
+      prevBtn.addEventListener('click', prevSlide);
+    }
+    
+    if (nextBtn) {
+      nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (themeToggle) {
+      themeToggle.addEventListener('click', toggleDarkMode);
+    }
+    
+    // Initialize dark mode
+    initDarkMode();
+    
+    // Initialize slideshow if on personal page on load
+    if (document.getElementById('personal-page').classList.contains('active')) {
+      setTimeout(initSlideshow, 100);
+    }
+  });
+
+  async function onConfigChange(config) {
     const heroName = document.getElementById('hero-name');
     const heroSubtitle = document.getElementById('hero-subtitle');
     const stageInfo = document.getElementById('stage-info');
@@ -980,11 +1780,12 @@
     const root = document.documentElement;
     root.style.setProperty('--color-background', config.background_color || defaultConfig.background_color);
     root.style.setProperty('--color-surface', config.surface_color || defaultConfig.surface_color);
-    root.style.setProperty('--color-text', config.text_color || defaultConfig.text_color);
+    root.style.setProperty('--color-text', config.text_text || defaultConfig.text_color);
     root.style.setProperty('--color-primary', config.primary_color || defaultConfig.primary_color);
     root.style.setProperty('--color-secondary', config.secondary_color || defaultConfig.secondary_color);
   }
-   function mapToCapabilities(config) {
+  
+  function mapToCapabilities(config) {
     return {
       recolorables: [
         { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; if (window.elementSdk) window.elementSdk.setConfig({ background_color: v }); } },
@@ -998,7 +1799,8 @@
       fontSizeable: undefined
     };
   }
-   function mapToEditPanelValues(config) {
+  
+  function mapToEditPanelValues(config) {
     return new Map([
       ['hero_name', config.hero_name || defaultConfig.hero_name],
       ['hero_subtitle', config.hero_subtitle || defaultConfig.hero_subtitle],
@@ -1007,7 +1809,8 @@
       ['cv_button_text', config.cv_button_text || defaultConfig.cv_button_text]
     ]);
   }
-   if (window.elementSdk) {
+  
+  if (window.elementSdk) {
     window.elementSdk.init({ defaultConfig, onConfigChange, mapToCapabilities, mapToEditPanelValues });
   } else {
     onConfigChange(defaultConfig);
