@@ -11,11 +11,11 @@
 
 <meta property="og:title" content="Fanta Sylla - Portfolio Community Manager">
 <meta property="og:description" content="Découvrez mes réalisations, mes compétences et mon parcours. À la recherche d'un stage pour 2026.">
-<meta property="og:image" content="https://fanta-sylla-portfolio.netlify.app/image/fanta-sylla.jpg">
-<meta property="og:url" content="https://fanta-sylla-portfolio.netlify.app/">
+<meta property="og:image" content="https://fantasylla.netlify.app/image/fanta-sylla.jpg">
+<meta property="og:url" content="https://fantasylla.netlify.app/">
 <meta property="og:type" content="website">
 
-<link rel="icon" type="image/png" href="FS-logo.png">
+<link rel="icon" type="image/png" href="fs.png">
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <script src="/_sdk/element_sdk.js"></script>
@@ -598,11 +598,10 @@
       <a href="#" onclick="goToSection('about'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">À propos</a> 
       <a href="#" onclick="goToSection('skills'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Compétences</a> 
       <a href="#" onclick="goToSection('projects'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Réalisations</a> 
-      <a href="#" onclick="goToSection('testimonials'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Avis</a>
-      <a href="#" onclick="goToSection('tools'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Mes outils</a>
       <a href="#" onclick="goToSection('experience'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Expériences</a> 
       <a href="#" onclick="goToSection('formations'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Formations</a>
-      <a href="#" onclick="showPage('personal'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">En dehors de la com</a>
+      <a href="#" onclick="goToSection('tools'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Mes outils</a>
+      <a href="#" onclick="goToSection('testimonials'); return false;" class="hover:text-primary transition-colors" style="color: var(--color-secondary);">Avis</a>
     </div>
 
     <button id="mobile-menu-btn" class="md:hidden p-2">
@@ -619,11 +618,10 @@
     <a href="#" onclick="goToSection('about'); closeMobileMenu(); return false;" style="color: var(--color-text);">À propos</a> 
     <a href="#" onclick="goToSection('skills'); closeMobileMenu(); return false;" style="color: var(--color-text);">Compétences</a> 
     <a href="#" onclick="goToSection('projects'); closeMobileMenu(); return false;" style="color: var(--color-text);">Réalisations</a> 
-    <a href="#" onclick="goToSection('testimonials'); closeMobileMenu(); return false;" style="color: var(--color-text);">Avis</a>
-    <a href="#" onclick="goToSection('tools'); closeMobileMenu(); return false;" style="color: var(--color-text);">Mes outils</a>
     <a href="#" onclick="goToSection('experience'); closeMobileMenu(); return false;" style="color: var(--color-text);">Expériences</a> 
     <a href="#" onclick="goToSection('formations'); closeMobileMenu(); return false;" style="color: var(--color-text);">Formations</a>
-    <a href="#" onclick="showPage('personal'); closeMobileMenu(); return false;" style="color: var(--color-text);">En dehors de la com</a>
+    <a href="#" onclick="goToSection('tools'); closeMobileMenu(); return false;" style="color: var(--color-text);">Mes outils</a>
+    <a href="#" onclick="goToSection('testimonials'); closeMobileMenu(); return false;" style="color: var(--color-text);">Avis</a>
   </div>
  </div>
 
@@ -731,47 +729,109 @@
    </div>
   </section>
 
-   <section id="testimonials" class="py-20 px-6" style="background: var(--color-surface);">
-   <div class="max-w-6xl mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Ils témoignent</h2>
-    <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Découvrez les retours des entreprises avec lesquelles j'ai eu le plaisir de collaborer</p>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Communik Testimonial -->
-      <div class="testimonial-card">
-        <img src="image/logocommunik.png" alt="Communik Logo" class="company-logo mx-auto">
-        <div class="company-name">Communik</div>
-        <p class="text-base italic mb-6 leading-relaxed text-center">« Nous tenons à souligner que Fanta a été une stagiaire particulièrement impliquée et motivée tout au long de son stage. Elle a su rapidement s'adapter à notre environnement de travail et faire preuve d'une grande autonomie dans les missions qui ont été confiées. Nous la remercions pour son engagement et son professionnalisme et nous ne pouvons que lui souhaiter une pleine réussite pour la suite de son parcours. »</p>
-        <div class="text-center">
-          <a href="#" onclick="showPage('communik')" class="btn-primary btn-small">Voir mon stage</a>
-        </div>
+   <section id="experience" class="py-20 px-6" style="background: var(--color-surface);">
+   <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes expériences</h2>
+    <div class="space-y-0">
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2025</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Stagiaire Community Manager</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">Communik</p>
+       <ul class="space-y-2 text-sm mb-6">
+        <li>• Réalisation de prises de vue pour des contenus destinés aux réseaux sociaux</li>
+        <li>• Montage vidéo adapté aux formats courts et aux tendances digitales</li>
+        <li>• Création de publications et rédaction de captions optimisées</li>
+        <li>• Participation à des tournages en tant que figurante</li>
+        <li>• Contribution à la stratégie de diffusion de contenus</li>
+       </ul><button onclick="showPage('communik')" class="btn-primary btn-small">Voir plus</button>
       </div>
-      
-      <!-- FM Cosmetics Testimonial -->
-      <div class="testimonial-card">
-        <img src="image/logofm.png" alt="FM Cosmetics Logo" class="company-logo mx-auto">
-        <div class="company-name">FM Cosmetics</div>
-        <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta est une étudiante ponctuelle et gentille avec une belle capacité d'adaptation. Elle a su nous faire des propositions de communication ainsi que des propositions d'amélioration. Elle avait soif d'apprendre et était à l'écoute. Continue comme ça. »</p>
-        <div class="text-center">
-          <a href="#" onclick="showPage('fmcosmetics')" class="btn-primary btn-small">Voir mon stage</a>
-        </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Depuis Décembre 2023</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Community Manager</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">Marana TV</p>
+       <ul class="space-y-2 text-sm mb-6">
+        <li>• Réalisation de planning éditorial</li>
+        <li>• Veille concurrentielle</li>
+        <li>• Analyse des performances des réseaux sociaux</li>
+        <li>• Animation et modération de la communauté</li>
+        <li>• Recherche et gestion de partenariats</li>
+       </ul><button onclick="showPage('marana')" class="btn-primary btn-small">Voir plus</button>
       </div>
-      
-      <!-- Marana TV Testimonial -->
-      <div class="testimonial-card">
-        <img src="image/logomarana.png" alt="Marana TV Logo" class="company-logo mx-auto">
-        <div class="company-name">Marana TV</div>
-        <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta a été super impliquée et toujours partante. Elle a participé à la création de contenus pour nos réseaux, proposé des idées, aidé à améliorer notre communication et s'est vite intégrée à l'équipe. Curieuse, à l'écoute et sérieuse, elle avait vraiment envie d'apprendre. Son investissement a clairement fait la différence. On lui souhaite que du bon pour la suite!! »</p>
-        <div class="text-center">
-          <a href="#" onclick="showPage('marana')" class="btn-primary btn-small">Voir mon expérience</a>
-        </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2024</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Stagiaire Chargée de communication externe</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">FM Cosmetics</p>
+       <ul class="space-y-2 text-sm mb-6">
+        <li>• Production de contenus</li>
+        <li>• Développement de stratégie de communication digitale et d'influence</li>
+        <li>• Analyse du marché et veille concurrentielle</li>
+        <li>• Optimisation SEO du site internet</li>
+       </ul><button onclick="showPage('fmcosmetics')" class="btn-primary btn-small">Voir plus</button>
       </div>
+     </div>
+     <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="card" style="background: var(--color-background);">
+       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">2018</div>
+       <h3 class="font-display text-2xl font-bold mb-2">Stage d'observation</h3>
+       <p class="text-lg mb-4" style="color: var(--color-secondary);">Dare.WIN</p>
+       <ul class="space-y-2 text-sm">
+        <li>• Observation et participation aux réunions d'équipe</li>
+        <li>• Observation du processus de création de contenu</li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section>
+
+   <section id="formations" class="py-20 px-6" style="background: var(--color-background);">
+   <div class="max-w-4xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes formations</h2>
+    <div class="space-y-6">
+     <div class="card" style="background: var(--color-surface);">
+      <div class="flex flex-wrap items-start gap-4">
+       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%); color: white;">En cours</div>
+       <div class="flex-1">
+        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Information Communication</h3>
+        <p class="mb-4" style="color: var(--color-secondary);">IUT de Montreuil, Université Paris 8</p>
+        <p class="text-sm leading-relaxed">Cette formation m'a apporté une maîtrise des fondamentaux de la communication stratégique, du branding et de la création de contenus, ainsi que la capacité à concevoir et piloter des dispositifs de communication cohérents.</p>
+       </div>
+      </div>
+     </div>
+     <div class="card" style="background: var(--color-surface);">
+      <div class="flex flex-wrap items-start gap-4">
+       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(184, 164, 229, 0.2); color: var(--color-secondary);">2022 - 2023</div>
+       <div class="flex-1">
+        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Techniques de Commercialisation </h3>
+        <p class="mb-4" style="color: var(--color-secondary);">IUT de Ville d'Avray, Université Paris 10</p>
+        <p class="text-sm leading-relaxed">Cette formation m'a permis d'acquérir une compréhension des enjeux commerciaux et marketing, d'analyser les marchés et les cibles, et d'intégrer une logique orientée performance dans les projets.</p>
+       </div>
+      </div>
+     </div>
+     <div class="card" style="background: var(--color-surface);">
+      <div class="flex flex-wrap items-start gap-4">
+       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(184, 164, 229, 0.2); color: var(--color-secondary);">2019 - 2022</div>
+       <div class="flex-1">
+        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">Baccalauréat STMG option marketing, mention Bien</h3>
+        <p style="color: var(--color-secondary);">Lycée Elisa Lemonnier, Paris 12</p>
+       </div>
+      </div>
+     </div>
     </div>
    </div>
   </section>
 
    <!-- New Tools Section -->
-   <section id="tools" class="py-20 px-6" style="background: var(--color-background);">
+   <section id="tools" class="py-20 px-6" style="background: var(--color-surface);">
    <div class="max-w-6xl mx-auto">
     <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mon Kit de survie de Community Manager</h2>
     <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Les outils que je maîtrise pour créer, organiser et analyser</p>
@@ -896,103 +956,41 @@
    </div>
   </section>
 
-   <section id="experience" class="py-20 px-6" style="background: var(--color-surface);">
-   <div class="max-w-4xl mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes expériences</h2>
-    <div class="space-y-0">
-     <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="card" style="background: var(--color-background);">
-       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2025</div>
-       <h3 class="font-display text-2xl font-bold mb-2">Stagiaire Community Manager</h3>
-       <p class="text-lg mb-4" style="color: var(--color-secondary);">Communik</p>
-       <ul class="space-y-2 text-sm mb-6">
-        <li>• Réalisation de prises de vue pour des contenus destinés aux réseaux sociaux</li>
-        <li>• Montage vidéo adapté aux formats courts et aux tendances digitales</li>
-        <li>• Création de publications et rédaction de captions optimisées</li>
-        <li>• Participation à des tournages en tant que figurante</li>
-        <li>• Contribution à la stratégie de diffusion de contenus</li>
-       </ul><button onclick="showPage('communik')" class="btn-primary btn-small">Voir plus</button>
+   <section id="testimonials" class="py-20 px-6" style="background: var(--color-background);">
+   <div class="max-w-6xl mx-auto">
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Ils témoignent</h2>
+    <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Découvrez les retours des entreprises avec lesquelles j'ai eu le plaisir de collaborer</p>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Communik Testimonial -->
+      <div class="testimonial-card">
+        <img src="image/logocommunik.png" alt="Communik Logo" class="company-logo mx-auto">
+        <div class="company-name">Communik</div>
+        <p class="text-base italic mb-6 leading-relaxed text-center">« Nous tenons à souligner que Fanta a été une stagiaire particulièrement impliquée et motivée tout au long de son stage. Elle a su rapidement s'adapter à notre environnement de travail et faire preuve d'une grande autonomie dans les missions qui ont été confiées. Nous la remercions pour son engagement et son professionnalisme et nous ne pouvons que lui souhaiter une pleine réussite pour la suite de son parcours. »</p>
+        <div class="text-center">
+          <a href="#" onclick="showPage('communik')" class="btn-primary btn-small">Voir mon stage</a>
+        </div>
       </div>
-     </div>
-     <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="card" style="background: var(--color-background);">
-       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Depuis Décembre 2023</div>
-       <h3 class="font-display text-2xl font-bold mb-2">Community Manager</h3>
-       <p class="text-lg mb-4" style="color: var(--color-secondary);">Marana TV</p>
-       <ul class="space-y-2 text-sm mb-6">
-        <li>• Réalisation de planning éditorial</li>
-        <li>• Veille concurrentielle</li>
-        <li>• Analyse des performances des réseaux sociaux</li>
-        <li>• Animation et modération de la communauté</li>
-        <li>• Recherche et gestion de partenariats</li>
-       </ul><button onclick="showPage('marana')" class="btn-primary btn-small">Voir plus</button>
+      
+      <!-- FM Cosmetics Testimonial -->
+      <div class="testimonial-card">
+        <img src="image/logofm.png" alt="FM Cosmetics Logo" class="company-logo mx-auto">
+        <div class="company-name">FM Cosmetics</div>
+        <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta est une étudiante ponctuelle et gentille avec une belle capacité d'adaptation. Elle a su nous faire des propositions de communication ainsi que des propositions d'amélioration. Elle avait soif d'apprendre et était à l'écoute. Continue comme ça. »</p>
+        <div class="text-center">
+          <a href="#" onclick="showPage('fmcosmetics')" class="btn-primary btn-small">Voir mon stage</a>
+        </div>
       </div>
-     </div>
-     <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="card" style="background: var(--color-background);">
-       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2024</div>
-       <h3 class="font-display text-2xl font-bold mb-2">Stagiaire Chargée de communication externe</h3>
-       <p class="text-lg mb-4" style="color: var(--color-secondary);">FM Cosmetics</p>
-       <ul class="space-y-2 text-sm mb-6">
-        <li>• Production de contenus</li>
-        <li>• Développement de stratégie de communication digitale et d'influence</li>
-        <li>• Analyse du marché et veille concurrentielle</li>
-        <li>• Optimisation SEO du site internet</li>
-       </ul><button onclick="showPage('fmcosmetics')" class="btn-primary btn-small">Voir plus</button>
+      
+      <!-- Marana TV Testimonial -->
+      <div class="testimonial-card">
+        <img src="image/logomarana.png" alt="Marana TV Logo" class="company-logo mx-auto">
+        <div class="company-name">Marana TV</div>
+        <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta a été super impliquée et toujours partante. Elle a participé à la création de contenus pour nos réseaux, proposé des idées, aidé à améliorer notre communication et s'est vite intégrée à l'équipe. Curieuse, à l'écoute et sérieuse, elle avait vraiment envie d'apprendre. Son investissement a clairement fait la différence. On lui souhaite que du bon pour la suite!! »</p>
+        <div class="text-center">
+          <a href="#" onclick="showPage('marana')" class="btn-primary btn-small">Voir mon expérience</a>
+        </div>
       </div>
-     </div>
-     <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="card" style="background: var(--color-background);">
-       <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">2018</div>
-       <h3 class="font-display text-2xl font-bold mb-2">Stage d'observation</h3>
-       <p class="text-lg mb-4" style="color: var(--color-secondary);">Dare.WIN</p>
-       <ul class="space-y-2 text-sm">
-        <li>• Observation et participation aux réunions d'équipe</li>
-        <li>• Observation du processus de création de contenu</li>
-       </ul>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-
-   <section id="formations" class="py-20 px-6" style="background: var(--color-background);">
-   <div class="max-w-4xl mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes formations</h2>
-    <div class="space-y-6">
-     <div class="card" style="background: var(--color-surface);">
-      <div class="flex flex-wrap items-start gap-4">
-       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%); color: white;">En cours</div>
-       <div class="flex-1">
-        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Information Communication</h3>
-        <p class="mb-4" style="color: var(--color-secondary);">IUT de Montreuil, Université Paris 8</p>
-        <p class="text-sm leading-relaxed">Cette formation m'a apporté une maîtrise des fondamentaux de la communication stratégique, du branding et de la création de contenus, ainsi que la capacité à concevoir et piloter des dispositifs de communication cohérents.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card" style="background: var(--color-surface);">
-      <div class="flex flex-wrap items-start gap-4">
-       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(184, 164, 229, 0.2); color: var(--color-secondary);">2022 - 2023</div>
-       <div class="flex-1">
-        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">BUT Techniques de Commercialisation </h3>
-        <p class="mb-4" style="color: var(--color-secondary);">IUT de Ville d'Avray, Université Paris 10</p>
-        <p class="text-sm leading-relaxed">Cette formation m'a permis d'acquérir une compréhension des enjeux commerciaux et marketing, d'analyser les marchés et les cibles, et d'intégrer une logique orientée performance dans les projets.</p>
-       </div>
-      </div>
-     </div>
-     <div class="card" style="background: var(--color-surface);">
-      <div class="flex flex-wrap items-start gap-4">
-       <div class="inline-block px-4 py-2 rounded-full text-sm font-bold" style="background: rgba(184, 164, 229, 0.2); color: var(--color-secondary);">2019 - 2022</div>
-       <div class="flex-1">
-        <h3 class="font-display text-xl md:text-2xl font-bold mb-2">Baccalauréat STMG option marketing, mention Bien</h3>
-        <p style="color: var(--color-secondary);">Lycée Elisa Lemonnier, Paris 12</p>
-       </div>
-      </div>
-     </div>
     </div>
    </div>
   </section>
@@ -1101,10 +1099,6 @@
     </div>
   </section>
  </div>
-
- <!-- Rest of the pages (communik, marana, fmcosmetics, academic) remain exactly the same -->
- <!-- Due to character limit, I'm showing only the modified parts -->
- <!-- The existing pages (communik-page, marana-page, fmcosmetics-page, academic-page) remain unchanged -->
 
  <!-- Communik Page -->
  <div id="communik-page" class="page">
