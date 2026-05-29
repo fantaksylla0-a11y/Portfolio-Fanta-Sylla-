@@ -747,15 +747,16 @@
     position: fixed;
     bottom: 2rem;
     left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    z-index: 9999;
+    transform: translateX(-50%) translateY(120px);
+    z-index: 99997;
     opacity: 0;
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
     pointer-events: none;
+    will-change: transform, opacity;
   }
   #dispo-popup.show {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
+    transform: translateX(-50%) translateY(0) !important;
+    opacity: 1 !important;
     pointer-events: all;
   }
   #dispo-popup .popup-inner {
@@ -831,17 +832,6 @@
   <svg width="20" height="20" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
 </button>
 
-<div id="dispo-popup">
-  <div class="popup-halo"></div>
-  <div class="popup-inner">
-    <span style="width:10px;height:10px;background:#a8f0a0;border-radius:50%;display:inline-block;flex-shrink:0;animation:pulse-green 1.8s infinite;"></span>
-    <div>
-      <div style="font-weight:600;font-size:0.9rem;color:var(--color-text);">Disponible en alternance</div>
-      <div style="font-size:0.78rem;color:var(--color-secondary);margin-top:2px;">2 ans · Île-de-France · Septembre 2026</div>
-    </div>
-    <button class="close-popup" onclick="document.getElementById('dispo-popup').classList.remove('show')">✕</button>
-  </div>
-</div>
 
 
 <div class="theme-toggle" id="themeToggle">
@@ -855,7 +845,7 @@
   <img id="enlargedImage" src="" alt="Image agrandie">
 </div>
 
-<div id="app-wrapper" class="w-full h-full overflow-auto">
+<div id="app-wrapper" class="w-full">
 
 <nav class="sticky top-0 left-0 right-0 z-50 px-6 py-4" style="background: rgba(var(--color-background-rgb, 255, 255, 255), 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(184, 164, 229, 0.2);">
   <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -1821,8 +1811,6 @@
       }
       
       // Scroll le wrapper principal en haut
-      const wrapper = document.getElementById('app-wrapper');
-      if (wrapper) wrapper.scrollTo(0, 0);
       window.scrollTo(0, 0);
       
       // Re-trigger scroll animations
@@ -2213,23 +2201,18 @@
   /* ── Bouton retour en haut ── */
   const backBtn = document.getElementById('back-to-top');
   function checkScroll() {
-    const scroll = (appWrapper && appWrapper.scrollTop) || window.scrollY;
-    if (backBtn) backBtn.classList.toggle('visible', scroll > 400);
+    if (backBtn) backBtn.classList.toggle('visible', window.scrollY > 400);
   }
-  if (appWrapper) appWrapper.addEventListener('scroll', checkScroll);
   window.addEventListener('scroll', checkScroll);
 
   /* ── Scroll progress bar ── */
   const progressBar = document.getElementById('scroll-progress');
-  const appWrapper  = document.getElementById('app-wrapper');
   function updateProgress() {
-    const el     = appWrapper || document.documentElement;
-    const scroll = el.scrollTop || window.scrollY;
-    const total  = (el.scrollHeight || document.body.scrollHeight) - (el.clientHeight || window.innerHeight);
+    const scroll = window.scrollY;
+    const total  = document.body.scrollHeight - window.innerHeight;
     const pct    = total > 0 ? (scroll / total) * 100 : 0;
     if (progressBar) progressBar.style.width = pct + '%';
   }
-  if (appWrapper) appWrapper.addEventListener('scroll', updateProgress);
   window.addEventListener('scroll', updateProgress);
 
   /* ── Disponibility popup ── */
@@ -2239,5 +2222,18 @@
   }, 1800);
 
 </script>
+
+<div id="dispo-popup">
+  <div class="popup-halo"></div>
+  <div class="popup-inner">
+    <span style="width:10px;height:10px;background:#a8f0a0;border-radius:50%;display:inline-block;flex-shrink:0;animation:pulse-green 1.8s infinite;"></span>
+    <div>
+      <div style="font-weight:600;font-size:0.9rem;color:var(--color-text);">Disponible en alternance</div>
+      <div style="font-size:0.78rem;color:var(--color-secondary);margin-top:2px;">2 ans · Île-de-France · Septembre 2026</div>
+    </div>
+    <button class="close-popup" onclick="document.getElementById('dispo-popup').classList.remove('show')">✕</button>
+  </div>
+</div>
+
 </body>
 </html>
