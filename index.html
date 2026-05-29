@@ -4,18 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Fanta Sylla - Portfolio Community Manager & Communication | Paris</title>
-<meta name="description" content="Portfolio de Fanta Sylla, étudiante en BUT Info-Com et Community Manager. Expertises : Stratégie digitale, Création de contenu, Réseaux sociaux. Recherche stage mars-juin 2026.">
-<meta name="keywords" content="Fanta Sylla, Community Manager, Communication, Portfolio, Stage, Paris, Île-de-France, Création de contenu, Digital">
+<title>Fanta Sylla – Alternance Marketing Digital & Data Analytics | Community Manager Paris</title>
+<meta name="description" content="Fanta Sylla, profil hybride marketing & data en alternance à Paris (sept. 2026). Community manager, chargée de marketing digital, social media manager. 4 expériences : agence, média, e-commerce, B2B. Google Analytics, Looker Studio, SEO, CRM, HubSpot.">
+<meta name="keywords" content="Fanta Sylla, alternance marketing digital, community manager Paris, chargée de communication, data analytics, social media manager, Google Analytics, Looker Studio, SEO, content manager, marketing B2B, stratégie contenu, réseaux sociaux, EMLV, IIM, Paris, Île-de-France, portfolio marketing, alternance communication, marketing automation, CRM HubSpot">
 <meta name="author" content="Fanta Sylla">
+<meta name="google-site-verification" content="9riEACaYDH1LoHQsAUSznBqaduhfwWUspA5aLsmip7o" />
 
-<meta property="og:title" content="Fanta Sylla - Portfolio Community Manager">
-<meta property="og:description" content="Découvrez mes réalisations, mes compétences et mon parcours. À la recherche d'un stage pour 2026.">
+<meta property="og:title" content="Fanta Sylla – Community Manager & Marketing Digital | Alternance Paris 2026">
+<meta property="og:description" content="Profil hybride marketing créatif + data. 4 expériences concrètes. Community manager, chargée de marketing digital, social media. Disponible en alternance dès septembre 2026 à Paris.">
 <meta property="og:image" content="https://fantasylla.netlify.app/image/fanta-sylla.jpg">
 <meta property="og:url" content="https://fantasylla.netlify.app/">
 <meta property="og:type" content="website">
 
-<link rel="icon" type="image/png" href="fs.png">
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Fanta Sylla" />
+<link rel="manifest" href="/site.webmanifest" />
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <script src="/_sdk/element_sdk.js"></script>
@@ -569,20 +575,281 @@
     cursor: pointer;
     z-index: 10000;
   }
+
+  /* Scroll animations — elements visible by default, animate in on scroll */
+  .reveal.visible {
+    animation: revealUp 0.7s ease both;
+  }
+  @keyframes revealUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal-left.visible {
+    animation: revealLeft 0.7s ease both;
+  }
+  @keyframes revealLeft {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  .reveal-scale.visible {
+    animation: revealScale 0.6s ease both;
+  }
+  @keyframes revealScale {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  /* Staggered delays for grids */
+  .stagger-1 { transition-delay: 0.1s; }
+  .stagger-2 { transition-delay: 0.2s; }
+  .stagger-3 { transition-delay: 0.3s; }
+  .stagger-4 { transition-delay: 0.4s; }
+  .stagger-5 { transition-delay: 0.5s; }
+  .stagger-6 { transition-delay: 0.6s; }
+
+  /* Custom cursor */
+  @media (pointer: fine) { * { cursor: none !important; } }
+  #cursor-halo {
+    position: fixed;
+    top: 0; left: 0;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,164,229,0.22) 0%, rgba(184,164,229,0.07) 50%, transparent 70%);
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    display: none;
+  }
+  #cursor-dot {
+    position: fixed;
+    top: 0; left: 0;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #B8A4E5;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px 3px rgba(184,164,229,0.8);
+    display: none;
+  }
+  #cursor-halo.on { display: block; }
+  #cursor-dot.on  { display: block; }
+  #cursor-halo.magnetic { width: 130px; height: 130px; background: radial-gradient(circle, rgba(155,133,199,0.28) 0%, rgba(184,164,229,0.08) 50%, transparent 70%); }
+  #cursor-dot.magnetic  { width: 12px; height: 12px; background: #9B85C7; box-shadow: 0 0 14px 5px rgba(155,133,199,0.9); }
+
+  /* CV pulse */
+  .cv-pulse {
+    animation: cv-pulse 2.5s ease-in-out infinite;
+  }
+  @keyframes cv-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(184, 164, 229, 0.5); }
+    50%       { box-shadow: 0 0 0 12px rgba(184, 164, 229, 0); transform: translateY(-3px); }
+  }
+
+  /* Back to top */
+  #back-to-top {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #B8A4E5, #9B85C7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9998;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(184, 164, 229, 0.4);
+    border: none;
+  }
+  #back-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(184, 164, 229, 0.5);
+  }
+
+  /* Tooltips */
+  .tool-item { position: relative; }
+  .tool-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    background: rgba(44, 36, 22, 0.92);
+    color: #fff;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    padding: 0.5rem 0.8rem;
+    border-radius: 10px;
+    white-space: normal;
+    width: 180px;
+    text-align: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  body.dark-mode .tool-tooltip {
+    background: rgba(255,255,255,0.92);
+    color: #2C2416;
+  }
+  .tool-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(44, 36, 22, 0.92);
+  }
+  body.dark-mode .tool-tooltip::after {
+    border-top-color: rgba(255,255,255,0.92);
+  }
+  .tool-item:hover .tool-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  @keyframes pulse-green {
+    0%   { box-shadow: 0 0 0 0 rgba(168, 240, 160, 0.7); }
+    70%  { box-shadow: 0 0 0 7px rgba(168, 240, 160, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(168, 240, 160, 0); }
+  }
+
+  /* Scroll progress bar */
+  #scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #B8A4E5, #9B85C7, #B8A4E5);
+    background-size: 200% 100%;
+    z-index: 99999;
+    transition: width 0.1s linear;
+    animation: shimmer 2s linear infinite;
+    box-shadow: 0 0 8px rgba(184, 164, 229, 0.8);
+  }
+  @keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* Disponibility popup */
+  #dispo-popup {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    z-index: 9999;
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease;
+    pointer-events: none;
+  }
+  #dispo-popup.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  #dispo-popup .popup-inner {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(184, 164, 229, 0.35);
+    border-radius: 20px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    box-shadow: 0 8px 32px rgba(184, 164, 229, 0.25), 0 0 60px rgba(184, 164, 229, 0.15);
+    white-space: nowrap;
+  }
+  body.dark-mode #dispo-popup .popup-inner {
+    background: rgba(26, 26, 46, 0.92);
+    border-color: rgba(184, 164, 229, 0.25);
+  }
+  #dispo-popup .popup-halo {
+    position: absolute;
+    inset: -12px;
+    border-radius: 28px;
+    background: radial-gradient(ellipse at center, rgba(184, 164, 229, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+    animation: halo-pulse 3s ease-in-out infinite;
+  }
+  @keyframes halo-pulse {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50%       { opacity: 1;   transform: scale(1.05); }
+  }
+  #dispo-popup .close-popup {
+    background: none;
+    border: none;
+    color: #9B85C7;
+    font-size: 1.1rem;
+    padding: 0 0 0 0.4rem;
+    line-height: 1;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+  }
+  #dispo-popup .close-popup:hover { opacity: 1; }
+
 </style>
 <style>@view-transition { navigation: auto; }</style>
 <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Fanta Sylla",
+  "url": "https://fantasylla.netlify.app",
+  "jobTitle": "Étudiante en Master Digital Marketing & Data Analytics",
+  "description": "Spécialisée en stratégie de contenu, analyse de performance et data marketing. Recherche une alternance à Paris à partir de septembre 2026.",
+  "alumniOf": [
+    { "@type": "EducationalOrganization", "name": "IUT de Montreuil – Université Paris 8" },
+    { "@type": "EducationalOrganization", "name": "EMLV / IIM" }
+  ],
+  "knowsAbout": ["Digital Marketing", "Community Management", "Content Strategy", "Data Analytics", "Google Analytics", "Looker Studio", "SEO", "Social Media Marketing", "Marketing Automation", "CRM", "HubSpot", "Email Marketing", "Marketing B2B", "KPI Reporting", "Stratégie de contenu", "Réseaux sociaux"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Paris", "addressCountry": "FR" },
+  "sameAs": ["https://www.linkedin.com/in/fanta-pro"]
+}
+</script>
+
 </head>
 <body class="h-full" style="background-color: var(--color-background); color: var(--color-text);">
 
-<!-- Theme Toggle Button -->
+<div id="scroll-progress"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-halo"></div>
+<button id="back-to-top" onclick="document.getElementById('app-wrapper').scrollTo({top:0,behavior:'smooth'}); window.scrollTo({top:0,behavior:'smooth'});">
+  <svg width="20" height="20" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/></svg>
+</button>
+
+<div id="dispo-popup">
+  <div class="popup-halo"></div>
+  <div class="popup-inner">
+    <span style="width:10px;height:10px;background:#a8f0a0;border-radius:50%;display:inline-block;flex-shrink:0;animation:pulse-green 1.8s infinite;"></span>
+    <div>
+      <div style="font-weight:600;font-size:0.9rem;color:var(--color-text);">Disponible en alternance</div>
+      <div style="font-size:0.78rem;color:var(--color-secondary);margin-top:2px;">2 ans · Île-de-France · Septembre 2026</div>
+    </div>
+    <button class="close-popup" onclick="document.getElementById('dispo-popup').classList.remove('show')">✕</button>
+  </div>
+</div>
+
+
 <div class="theme-toggle" id="themeToggle">
   <svg id="themeIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path id="themeIconPath" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
   </svg>
 </div>
 
-<!-- Modal for enlarged images -->
 <div class="enlarged-modal" id="enlargedModal">
   <button class="close-modal" onclick="closeEnlargedModal()">×</button>
   <img id="enlargedImage" src="" alt="Image agrandie">
@@ -626,20 +893,22 @@
  </div>
 
  <div id="home-page" class="page active">
+
+
   <section id="hero" class="flex items-center justify-center px-6 pt-10 pb-20">
    <div class="max-w-6xl mx-auto">
     <div class="grid md:grid-cols-2 gap-16 items-center">
      <div>
       <h1 id="hero-name" class="font-display text-5xl md:text-7xl font-bold mb-10 gradient-text block" style="line-height: 1.2;">Fanta Sylla</h1>
-      <p id="hero-subtitle" class="text-xl md:text-2xl mb-6" style="color: var(--color-secondary);">Aspiring communicante, en Bac+3</p>
+      <p id="hero-subtitle" class="text-xl md:text-2xl mb-6" style="color: var(--color-secondary);">Aspiring Digital Marketer, en Master Digital Marketing & Data Analytics</p>
       <div class="mb-8">
        <p class="text-lg md:text-xl">Je suis <span id="typing-text" class="gradient-text font-semibold"></span><span class="typing-cursor">|</span></p>
       </div>
       <div class="card mb-10">
-       <p id="stage-info" class="text-lg">À la recherche d'un stage, du 16 mars au 19 juin 2026</p>
+       <p id="stage-info" class="text-lg">À la recherche d'une alternance de 2 ans à partir de septembre 2026</p>
       </div>
       <div class="flex flex-col sm:flex-row gap-4">
-        <a href="#" onclick="goToSection('about'); return false;" class="btn-primary text-center">Découvrir mon parcours</a> 
+        <a href="#" onclick="goToSection('experience'); return false;" class="btn-primary text-center">Découvrir mon parcours</a> 
         <a href="#" onclick="goToSection('contact'); return false;" class="btn-secondary text-center">Me contacter</a>
       </div>
      </div>
@@ -659,16 +928,16 @@
   
   <section id="about" class="py-20 px-6">
    <div class="max-w-4xl mx-auto">
-    <h2 id="about-title" class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Qui suis-je ?</h2>
-    <div class="card space-y-6 text-lg leading-relaxed">
-     <p> Futur étudiante en Master Digital Marketing et Data Analytics, je me positionne à l'intersection du marketing de contenu et de la data. Après 3 expériences en agence, média et e-commerce, j'ai développé une approche orientée performance : je ne crée pas du contenu pour simplement le publier ; je l'analyse, je l'optimise et je le pilote par les KPI.</p> 
+    <h2 id="about-title" class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text reveal">Qui suis-je ?</h2>
+    <div class="card space-y-6 text-lg leading-relaxed reveal">
+     <p> Futur étudiante en Master Digital Marketing et Data Analytics, je me positionne à l'intersection du marketing de contenu et de la data. Après 4 expériences en agence, média, e-commerce et auprès d'entrepreneurs en marketing B2B, j'ai développé une approche orientée performance : je ne crée pas du contenu pour simplement le publier ; je l'analyse, je l'optimise et je le pilote par les KPI.</p>
      <p class="italic" style="color: var(--color-secondary);">Ce portfolio reflète cette évolution : des stratégies éditoriales construites et une vision qui va au-delà de l'esthétique pour viser la conversion. </p>
      <div class="pt-4 text-center">
         <button onclick="showPage('personal')" class="fun-fact-btn">En dehors de la com, je suis... </button>
      </div>
     </div>
     <div class="text-center mt-8">
-     <a href="image/CV-Alternance-Fanta-Sylla.pdf" target="_blank" class="btn-primary">
+     <a href="image/CV-Alternance-Fanta-Sylla.pdf" target="_blank" class="btn-primary cv-pulse">
       <span id="cv-button-text">Télécharger mon CV</span>
      </a>
     </div>
@@ -677,7 +946,7 @@
 
    <section id="skills" class="py-20 px-6" style="background: var(--color-surface);">
    <div class="max-w-6xl mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes compétences</h2>
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text reveal">Mes compétences</h2>
     <div class="flex flex-wrap justify-center gap-4">
      <div class="skill-tag">Conception de stratégies</div>
      <div class="skill-tag">Stratégie data-driven</div>
@@ -699,7 +968,7 @@
      <div class="skill-tag">Marketing automation</div>
      <div class="skill-tag">Google Looker Studio</div>
      <div class="skill-tag">Analyse KPI et Reporting</div>
-     
+     <div class="skill-tag">CRM</div>
 
     </div>
    </div>
@@ -707,9 +976,9 @@
 
    <section id="projects" class="py-20 px-6" style="background: var(--color-background);">
    <div class="max-w-6xl mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes réalisations</h2>
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text reveal">Mes réalisations</h2>
     <div class="grid md:grid-cols-2 gap-8">
-     <div class="card cursor-pointer" onclick="goToSection('experience')">
+     <div class="card cursor-pointer reveal-left stagger-1" onclick="goToSection('experience')">
       <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);">
        <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
       </div>
@@ -717,7 +986,7 @@
       <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Découvrez les projets concrets réalisés lors de mes stages en agence, média et entreprise.</p><span class="inline-flex items-center font-semibold" style="color: var(--color-primary);"> Explorer <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></span>
      </div>
      
-     <div class="card cursor-pointer" onclick="showPage('academic');">
+     <div class="card cursor-pointer reveal-left stagger-2" onclick="showPage('academic');">
       <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background: linear-gradient(135deg, #B8A4E5 0%, #9B85C7 100%);">
        <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
       </div>
@@ -732,7 +1001,7 @@
    <div class="max-w-4xl mx-auto">
     <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mes expériences</h2>
     <div class="space-y-0">
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
       <div class="card" style="background: var(--color-background);">
        <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">À partir de mars 2026</div>
@@ -742,10 +1011,11 @@
         <li>• Conception et déploiement de la stratégie de contenu LinkedIn et Instagram : calendrier éditorial, ligne éditoriale, suivi des KPI (portée, engagement, abonnés)</li>
         <li>• Création et envoi des campagnes newsletter via outil d'emailing : segmentation, rédaction, analyse des taux d'ouverture et de clics</li>
         <li>• Mise en place d'un tableau de bord de performance des actions de communication avec Google Looker Studio</li>
-       </ul><button onclick="showPage('Démèl-Admin ')" class="btn-primary btn-small">Voir plus</button>
+        <li>• Développement et déploiement d'un site web vitrine optimisé SEO : architecture sémantique, balises méta et référencement naturel on-page</li>
+       </ul><button onclick="showPage('demel-admin')" class="btn-primary btn-small">Voir plus</button>
       </div>
      </div>
-      <div class="timeline-item">
+      <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
       <div class="card" style="background: var(--color-background);">
        <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Décembre 2023 - Juillet 2025</div>
@@ -760,7 +1030,7 @@
        </ul><button onclick="showPage('marana')" class="btn-primary btn-small">Voir plus</button>
       </div>
      </div>
-     <div class="timeline-item">
+     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
       <div class="card" style="background: var(--color-background);">
        <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2025</div>
@@ -774,7 +1044,7 @@
        </ul><button onclick="showPage('communik')" class="btn-primary btn-small">Voir plus</button>
       </div>
      </div>
-     <div class="timeline-item">
+     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
       <div class="card" style="background: var(--color-background);">
        <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">Mai - Juin 2024</div>
@@ -788,7 +1058,7 @@
        </ul><button onclick="showPage('fmcosmetics')" class="btn-primary btn-small">Voir plus</button>
       </div>
      </div>
-     <div class="timeline-item">
+     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
       <div class="card" style="background: var(--color-background);">
        <div class="mb-2" style="color: var(--color-primary); font-weight: 600;">2018</div>
@@ -851,143 +1121,112 @@
    </div>
   </section>
 
-   <!-- New Tools Section -->
    <section id="tools" class="py-20 px-6" style="background: var(--color-surface);">
    <div class="max-w-6xl mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Mon Kit de survie de Community Manager</h2>
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text reveal">Mon Kit de survie </h2>
     <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Les outils que je maîtrise pour créer, organiser et analyser</p>
     
     <div class="tools-grid">
-      <!-- 5 stars -->
-      <div class="tool-item">
+      <div class="tool-item reveal-scale stagger-1" data-tooltip="Mon outil de création graphique de référence — visuels réseaux, supports pro et perso.">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/canva.svg" alt="Canva" class="tool-icon">
         <div class="tool-name">Canva</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       </div>
-      
-  <div class="tool-item">
-  <!-- Image SVG locale pour CapCut -->
-  <img src="image/logocapcut.svg" alt="CapCut" class="tool-icon">
-  <div class="tool-name">CapCut</div>
-  <div class="tool-stars">
-    <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-  </div>
-</div>
-      
-      <div class="tool-item">
+
+      <div class="tool-item reveal-scale stagger-2" data-tooltip="Montage Reels & TikTok chez Communik — mon outil de montage vidéo quotidien.">
+        <img src="image/logocapcut.svg" alt="CapCut" class="tool-icon">
+        <div class="tool-name">CapCut</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-3" data-tooltip="Utilisé principalement en contexte scolaire pour la rédaction, les tableaux et les présentations.">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/microsoftoffice.svg" alt="Office" class="tool-icon">
         <div class="tool-name">Suite Office</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       </div>
-      
-      <div class="tool-item">
+
+      <div class="tool-item reveal-scale stagger-4" data-tooltip="Ma suite préférée — saisie des KPI sur Sheets, dashboards connectés à Looker Studio.">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/google.svg" alt="Google" class="tool-icon">
-        <div class="tool-name">Google Workplace</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+        <div class="tool-name">Google Workspace</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       </div>
-      
-      <!-- 4 stars -->
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/trello.svg" alt="Trello" class="tool-icon">
-        <div class="tool-name">Trello</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/wix.svg" alt="Wix" class="tool-icon">
-        <div class="tool-name">Wix</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <!-- 3 stars -->
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/facebook.svg" alt="Meta Business" class="tool-icon">
-        <div class="tool-name">Meta Business</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobepremierepro.svg" alt="Premiere Pro" class="tool-icon">
-        <div class="tool-name">Premiere Pro</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobephotoshop.svg" alt="Photoshop" class="tool-icon">
-        <div class="tool-name">Photoshop</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobeillustrator.svg" alt="Illustrator" class="tool-icon">
-        <div class="tool-name">Illustrator</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mailchimp.svg" alt="Mailchimp" class="tool-icon">
-        <div class="tool-name">Mailchimp</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/wordpress.svg" alt="WordPress" class="tool-icon">
-        <div class="tool-name">WordPress</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
-      </div>
-      
-      <div class="tool-item">
+
+      <div class="tool-item reveal-scale stagger-5" data-tooltip="Outil central chez Démèl-Admin — planning éditorial, to-do list, partage d'infos, tout centralisé.">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/notion.svg" alt="Notion" class="tool-icon">
         <div class="tool-name">Notion</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       </div>
-      
-      <div class="tool-item">
+
+      <div class="tool-item reveal-scale stagger-6" data-tooltip="Utilisé comme rétroplanning en contexte scolaire — je préfère Notion au quotidien.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/trello.svg" alt="Trello" class="tool-icon">
+        <div class="tool-name">Trello</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-1" data-tooltip="Création de sites web — j'ai réalisé mon tout premier portfolio sur Wix.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/wix.svg" alt="Wix" class="tool-icon">
+        <div class="tool-name">Wix</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-2" data-tooltip="Programmation de contenu et suivi des KPI pour les clients de Communik.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/facebook.svg" alt="Meta Business" class="tool-icon">
+        <div class="tool-name">Meta Business</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-3" data-tooltip="Montage précis et professionnel — utilisé pour la pub vidéo YSL en formation.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobepremierepro.svg" alt="Premiere Pro" class="tool-icon">
+        <div class="tool-name">Premiere Pro</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-4" data-tooltip="Retouche et création image en contexte scolaire — Canva suffit en milieu pro.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobephotoshop.svg" alt="Photoshop" class="tool-icon">
+        <div class="tool-name">Photoshop</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-5" data-tooltip="Illustration vectorielle en contexte scolaire — Canva suffit en milieu pro.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/adobeillustrator.svg" alt="Illustrator" class="tool-icon">
+        <div class="tool-name">Illustrator</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-6" data-tooltip="Envoi de newsletters chez Démèl-Admin — segmentation, rédaction et analyse des performances.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/mailchimp.svg" alt="Mailchimp" class="tool-icon">
+        <div class="tool-name">Mailchimp</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-1" data-tooltip="Gestion et modification de sites clients hébergés sur WordPress chez Communik.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/wordpress.svg" alt="WordPress" class="tool-icon">
+        <div class="tool-name">WordPress</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-2" data-tooltip="Gestion de projet et planning éditorial chez Communik — même usage que Notion.">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/asana.svg" alt="Asana" class="tool-icon">
         <div class="tool-name">Asana</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       </div>
 
-      <div class="tool-item">
+      <div class="tool-item reveal-scale stagger-3" data-tooltip="Analyse des performances du site web chez Démèl-Admin.">
         <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/googleanalytics.svg" alt="Google Analytics" class="tool-icon">
         <div class="tool-name">Google Analytics</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       </div>
 
-      <div class="tool-item">
-        <img src="image/looker.svg"" alt="Google Looker Studio" class="tool-icon">
+      <div class="tool-item reveal-scale stagger-4" data-tooltip="Dashboards KPI réseaux sociaux chez Démèl-Admin — visualisation et ajustement de stratégie.">
+        <img src="image/looker.svg" alt="Google Looker Studio" class="tool-icon">
         <div class="tool-name">Google Looker Studio</div>
-        <div class="tool-stars">
-          <span class="star">★</span><span class="star">★</span><span class="star">★</span>
-        </div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+      </div>
+
+      <div class="tool-item reveal-scale stagger-5" data-tooltip="CRM de Démèl-Admin — suivi des contacts et gestion de la relation client.">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/hubspot.svg" alt="HubSpot" class="tool-icon">
+        <div class="tool-name">HubSpot</div>
+        <div class="tool-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
       </div>
     </div>
    </div>
@@ -995,12 +1234,11 @@
 
    <section id="testimonials" class="py-20 px-6" style="background: var(--color-background);">
    <div class="max-w-6xl mx-auto">
-    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text">Ils témoignent</h2>
+    <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-center gradient-text reveal">Ils témoignent</h2>
     <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Découvrez les retours des entreprises avec lesquelles j'ai eu le plaisir de collaborer</p>
     
     <div class="grid md:grid-cols-3 gap-8">
-      <!-- Communik Testimonial -->
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal-scale stagger-1">
         <img src="image/logocommunik.png" alt="Communik Logo" class="company-logo mx-auto">
         <div class="company-name">Communik</div>
         <p class="text-base italic mb-6 leading-relaxed text-center">« Nous tenons à souligner que Fanta a été une stagiaire particulièrement impliquée et motivée tout au long de son stage. Elle a su rapidement s'adapter à notre environnement de travail et faire preuve d'une grande autonomie dans les missions qui ont été confiées. Nous la remercions pour son engagement et son professionnalisme et nous ne pouvons que lui souhaiter une pleine réussite pour la suite de son parcours. »</p>
@@ -1009,8 +1247,7 @@
         </div>
       </div>
       
-      <!-- FM Cosmetics Testimonial -->
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal-scale stagger-2">
         <img src="image/logofm.png" alt="FM Cosmetics Logo" class="company-logo mx-auto">
         <div class="company-name">FM Cosmetics</div>
         <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta est une étudiante ponctuelle et gentille avec une belle capacité d'adaptation. Elle a su nous faire des propositions de communication ainsi que des propositions d'amélioration. Elle avait soif d'apprendre et était à l'écoute. Continue comme ça. »</p>
@@ -1019,8 +1256,7 @@
         </div>
       </div>
       
-      <!-- Marana TV Testimonial -->
-      <div class="testimonial-card">
+      <div class="testimonial-card reveal-scale stagger-3">
         <img src="image/logomarana.png" alt="Marana TV Logo" class="company-logo mx-auto">
         <div class="company-name">Marana TV</div>
         <p class="text-base italic mb-6 leading-relaxed text-center">« Fanta a été super impliquée et toujours partante. Elle a participé à la création de contenus pour nos réseaux, proposé des idées, aidé à améliorer notre communication et s'est vite intégrée à l'équipe. Curieuse, à l'écoute et sérieuse, elle avait vraiment envie d'apprendre. Son investissement a clairement fait la différence. On lui souhaite que du bon pour la suite!! »</p>
@@ -1035,7 +1271,7 @@
   <section id="contact" class="py-20 px-6" style="background: var(--color-surface);">
    <div class="max-w-4xl mx-auto text-center">
     <h2 class="font-display text-4xl md:text-5xl font-bold mb-8 gradient-text">Travaillons ensemble</h2>
-    <p class="text-lg md:text-xl mb-12" style="color: var(--color-secondary);">Vous avez une opportunité de stage ou un projet à me proposer ? N'hésitez pas à me contacter.</p>
+    <p class="text-lg md:text-xl mb-12" style="color: var(--color-secondary);">Vous avez une opportunité à me proposer ? N'hésitez pas à me contacter!</p>
     <div class="flex flex-col sm:flex-row gap-6 justify-center">
       <a href="mailto:Syllafanta.pro@gmail.com" class="btn-primary"> M'envoyer un email </a> 
       
@@ -1054,7 +1290,6 @@
   </footer>
  </div>
 
- <!-- Personal Page -->
  <div id="personal-page" class="page">
   <div class="fixed top-24 left-6 z-40">
     <button onclick="showPage('home')" class="btn-secondary flex items-center">
@@ -1082,22 +1317,18 @@
         </div>
       </div>
 
-      <!-- Travel Section -->
       <div class="mb-20">
         <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes voyages</h2>
         <p class="text-lg text-center mb-12 max-w-3xl mx-auto" style="color: var(--color-secondary);">Sénégal • Albanie • Grèce • Espagne • Portugal • Annecy</p>
         
         <div class="slideshow-container">
-          <!-- Slides will be added dynamically by JavaScript -->
           <button class="slide-nav prev-slide">‹</button>
           <button class="slide-nav next-slide">›</button>
           <div class="slide-dots"></div>
         </div>
       </div>
 
-      <!-- Passions Grid -->
       <div class="grid md:grid-cols-3 gap-8">
-        <!-- Music Passion -->
         <div class="passion-card">
           <div class="passion-icon mx-auto">
             <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1109,7 +1340,6 @@
           <img src="image/spotify.png" alt="Spotify" class="passion-image" onclick="openEnlargedModal('image/spotify.png')">
         </div>
 
-        <!-- Cosmetics Passion -->
         <div class="passion-card">
           <div class="passion-icon mx-auto">
             <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1121,7 +1351,6 @@
           <img src="image/cosmetics.jpg" alt="Cosmetics" class="passion-image" onclick="openEnlargedModal('image/cosmetics.jpg')">
         </div>
 
-        <!-- Entertainment & History Passion -->
         <div class="passion-card">
           <div class="passion-icon mx-auto">
             <svg class="w-8 h-8" style="color: white;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1137,7 +1366,6 @@
   </section>
  </div>
 
- <!-- Communik Page -->
  <div id="communik-page" class="page">
   <div class="fixed top-24 left-6 z-40">
     <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
@@ -1175,74 +1403,59 @@
         <div class="mt-12">
           <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes réalisations</h2>
           
-      <div class="card mb-8">
-  <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">📱 Stories Instagram</h3>
-  
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-    <img src="image/story-omelette.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
     
-    <img src="image/story-communik.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
-    
-    <img src="image/story-communik-2.png" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
-    
-    <img src="image/story-communik-3.png" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
-    
-    <img src="image/story-communik-4.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
-    
-    <img src="image/story-communik-5.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
-    
-    <img src="image/story-communik-6.jpg" onclick="openModal(this.src)" class="cursor-pointer rounded-xl shadow-lg hover:scale-105 transition h-80 w-full object-cover">
+      <div class="card mb-6">
+        <div class="grid grid-cols-3 gap-3" style="grid-auto-rows: 200px;">
+          <div class="row-span-2 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/story-omelette.jpg')"><img src="image/story-omelette.jpg" class="w-full h-full object-cover"></div>
+          <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/story-communik.jpg')"><img src="image/story-communik.jpg" class="w-full h-full object-cover"></div>
+          <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/story-communik-2.png')"><img src="image/story-communik-2.png" class="w-full h-full object-cover"></div>
+          <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/story-communik-3.png')"><img src="image/story-communik-3.png" class="w-full h-full object-cover"></div>
+          <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/story-communik-4.jpg')"><img src="image/story-communik-4.jpg" class="w-full h-full object-cover"></div>
+          <div class="col-span-2 rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/story-communik-5.jpg')"><img src="image/story-communik-5.jpg" class="w-full h-full object-cover"></div>
+          <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/story-communik-6.jpg')"><img src="image/story-communik-6.jpg" class="w-full h-full object-cover"></div>
+        </div>
+      </div>
 
-  </div>
-</div>
-          <div class="card">
-            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">🎬 Contenus TikTok & Reels</h3>
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
-                <video controls class="w-full h-full object-cover">
-                  <source src="videos/video-communik-1.mp4" type="video/mp4">
-                </video>
-              </div>
-              
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
-                <video controls class="w-full h-full object-cover">
-                  <source src="videos/video-communik-2.mov" type="video/quicktime">
-                </video>
-              </div>
-
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
-                <video controls class="w-full h-full object-cover">
-                  <source src="videos/video-communik-3.mp4" type="video/mp4">
-                </video>
-              </div>
-
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
-                <video controls class="w-full h-full object-cover">
-                  <source src="videos/video-communik-4.mov" type="video/quicktime">
-                </video>
-              </div>
-
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
-                <video controls class="w-full h-full object-cover">
-                  <source src="videos/video-communik-5.mp4" type="video/mp4">
-                </video>
-              </div>
-
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
-                <video controls class="w-full h-full object-cover">
-                  <source src="videos/video-communik-6.mov" type="video/quicktime">
-                </video>
-              </div>
-
-            </div>
+      <div class="card">
+        <div class="grid grid-cols-2 gap-4" style="grid-auto-rows: 340px;">
+          <div class="col-span-2 rounded-2xl overflow-hidden shadow-md bg-black">
+            <video controls class="w-full h-full object-cover">
+              <source src="videos/video-communik-1.mp4" type="video/mp4">
+            </video>
           </div>
+          <div class="rounded-2xl overflow-hidden shadow-md bg-black">
+            <video controls class="w-full h-full object-cover">
+              <source src="videos/video-communik-2.mov" type="video/quicktime">
+            </video>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md bg-black">
+            <video controls class="w-full h-full object-cover">
+              <source src="videos/video-communik-3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md bg-black">
+            <video controls class="w-full h-full object-cover">
+              <source src="videos/video-communik-4.mov" type="video/quicktime">
+            </video>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md bg-black">
+            <video controls class="w-full h-full object-cover">
+              <source src="videos/video-communik-5.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="col-span-2 rounded-2xl overflow-hidden shadow-md bg-black">
+            <video controls class="w-full h-full object-cover">
+              <source src="videos/video-communik-6.mov" type="video/quicktime">
+            </video>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
   </section>
 </div>
 
- <!-- Marana Page -->
  <div id="marana-page" class="page">
   <div class="fixed top-20 left-6 z-40">
     <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
@@ -1280,40 +1493,32 @@
         <div class="mt-12">
           <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes réalisations</h2>
           <div class="card">
-            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">📹 Contenus Instagram</h3>
-            <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Création et montage de vidéos pour alimenter le compte Instagram de Marana TV</p>
-            
-            <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+            <div class="grid grid-cols-2 gap-4" style="grid-auto-rows: 340px;">
+              <div class="col-span-2 rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-marana-1.mp4" type="video/mp4">
                 </video>
               </div>
-              
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+              <div class="rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-marana-2.mp4" type="video/mp4">
                 </video>
               </div>
-
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+              <div class="rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-marana-3.mp4" type="video/mp4">
                 </video>
               </div>
-
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+              <div class="rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-marana-4.mp4" type="video/mp4">
                 </video>
               </div>
-
-              <div class="rounded-xl overflow-hidden shadow-md bg-black h-80">
+              <div class="rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-marana-5.mp4" type="video/mp4">
                 </video>
               </div>
-
             </div>
           </div>
         </div>
@@ -1322,7 +1527,69 @@
   </section>
 </div>
 
- <!-- FM Cosmetics Page -->
+ <div id="demel-admin-page" class="page">
+  <div class="fixed top-24 left-6 z-40">
+    <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg> Retour
+    </button>
+  </div>
+
+  <section class="py-32 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 gradient-text">Stage chez Démèl-Admin</h1>
+        <p class="text-lg max-w-3xl mx-auto leading-relaxed" style="color: var(--color-secondary);">À partir de mars 2026 • Stagiaire Chargée de Marketing Digital</p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+
+        <div class="card mb-8">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">À propos de Démèl-Admin</h2>
+          <p class="text-lg leading-relaxed mb-4">Mélanie Traulle est solopreneur spécialisée dans l'assistanat de direction en temps partagé. Elle accompagne des entrepreneurs dans leur quotidien professionnel pour leur permettre de se recentrer sur ce qui compte vraiment : leur activité.</p>
+          <p class="text-lg leading-relaxed">Au-delà de son activité principale, Mélanie est co-fondatrice de <strong>Convergence</strong>, un espace de coworking à Palaiseau (91) qu'elle a créé pour offrir aux solopreneurs un cadre de travail convivial et bienveillant. Elle co-anime également <strong>La Parenthèse</strong>, une communauté d'entrepreneurs qui se réunit régulièrement pour s'entraider, partager leurs défis du moment et avancer ensemble, sans pression commerciale.</p>
+        </div>
+
+        <div class="card mb-8">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 gradient-text">Mes missions</h2>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span><span>Construction de la stratégie de contenu LinkedIn et Instagram de A à Z : définition de la ligne éditoriale, création du calendrier de publication, rédaction des posts et suivi mensuel des KPI (portée, engagement, croissance des abonnés)</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span><span>Pilotage des campagnes newsletter : segmentation de la base contacts, rédaction des emails, programmation des envois et analyse des taux d'ouverture et de clics pour ajuster les prochaines campagnes</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span><span>Création d'un tableau de bord de performance sur Google Looker Studio pour centraliser et visualiser les données de communication en un seul endroit</span></li>
+            <li class="flex items-start"><span class="text-2xl mr-4" style="color: var(--color-primary);">•</span><span>Développement et mise en ligne d'un site web vitrine avec une approche SEO on-page : structuration de l'architecture sémantique, optimisation des balises méta et du maillage interne pour améliorer la visibilité sur Google</span></li>
+          </ul>
+        </div>
+
+        <div class="mt-12">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes réalisations</h2>
+
+          <div class="card">
+      
+            <div class="mb-4 cursor-pointer" onclick="openModal('image/demel-dashboard.jpg')">
+              <img src="image/demel-dashboard.jpg" class="w-full rounded-2xl shadow-md hover:scale-105 transition object-cover">
+            </div>
+
+            <div class="grid grid-cols-3 gap-4 mb-4" style="grid-auto-rows: 280px;">
+              <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/demel-linkedin-1.jpg')"><img src="image/demel-linkedin-1.jpg" class="w-full h-full object-cover"></div>
+              <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/demel-linkedin-2.jpg')"><img src="image/demel-linkedin-2.jpg" class="w-full h-full object-cover"></div>
+              <div class="rounded-2xl overflow-hidden cursor-pointer shadow-md hover:scale-105 transition" onclick="openModal('image/demel-instagram.jpg')"><img src="image/demel-instagram.jpg" class="w-full h-full object-cover"></div>
+            </div>
+
+            <div class="max-w-sm mx-auto rounded-2xl overflow-hidden shadow-md bg-black" style="height: 380px;">
+              <video controls class="w-full h-full object-cover">
+                <source src="videos/Avis-Jean-Noel.MOV" type="video/quicktime">
+                <source src="videos/Avis-Jean-Noel.MOV" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+ </div>
+
  <div id="fmcosmetics-page" class="page">
   <div class="fixed top-20 left-6 z-40">
     <button onclick="goToSection('experience')" class="btn-secondary flex items-center">
@@ -1359,34 +1626,28 @@
         <div class="mt-12">
           <h2 class="font-display text-3xl md:text-4xl font-bold mb-8 text-center gradient-text">Mes réalisations</h2>
           
-          <div class="card mb-8">
-            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">🎥 Contenus vidéo Instagram &amp; TikTok</h3>
-            <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Création et montage de vidéos pour alimenter les comptes Instagram et TikTok de FM Cosmetics</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div class="rounded-xl overflow-hidden shadow-lg bg-black h-80">
+          <div class="card">
+         
+            <div class="mb-4 cursor-pointer" onclick="openModal('image/newsletter.png')">
+              <img src="image/newsletter.png" alt="Newsletter FM Cosmetics" class="w-full rounded-2xl shadow-md hover:scale-105 transition-transform object-cover">
+            </div>
+           
+            <div class="grid grid-cols-3 gap-4" style="grid-auto-rows: 360px;">
+              <div class="rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-fm-1.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="rounded-xl overflow-hidden shadow-lg bg-black h-80">
+              <div class="rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-fm-2.mp4" type="video/mp4">
                 </video>
               </div>
-              <div class="rounded-xl overflow-hidden shadow-lg bg-black h-80">
+              <div class="rounded-2xl overflow-hidden shadow-md bg-black">
                 <video controls class="w-full h-full object-cover">
                   <source src="videos/video-fm-3.mp4" type="video/mp4">
                 </video>
               </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 class="font-display text-xl md:text-2xl font-bold mb-6" style="color: var(--color-primary);">📧 Newsletter</h3>
-            <p class="text-base mb-6 leading-relaxed" style="color: var(--color-secondary);">Conception et rédaction d'une newsletter pour la communication client de FM Cosmetics</p>
-            <div class="cursor-pointer" onclick="openModal('image/newsletter.png')">
-              <img src="image/newsletter.png" alt="Newsletter FM Cosmetics" class="w-full max-w-2xl mx-auto rounded-xl shadow-lg hover:scale-105 transition-transform">
             </div>
           </div>
         </div>
@@ -1396,13 +1657,18 @@
 </div>
 
 <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center p-4" onclick="closeModal()">
-       <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-gray-300 z-60">
-           <svg width="40" height="40" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line> <line x1="6" y1="6" x2="18" y2="18"></line></svg>
-       </button>
-       <img id="modalImage" src="" alt="Réalisation" class="max-w-full max-h-full object-contain rounded-lg" onclick="event.stopPropagation()">
+  <button onclick="closeModal()" class="absolute top-6 right-6 text-white hover:text-gray-300 z-60">
+    <svg width="40" height="40" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  </button>
+  <button id="modalPrev" onclick="event.stopPropagation(); modalNav(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full w-12 h-12 flex items-center justify-center transition z-60">
+    <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+  </button>
+  <button id="modalNext" onclick="event.stopPropagation(); modalNav(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-white bg-opacity-20 hover:bg-opacity-40 rounded-full w-12 h-12 flex items-center justify-center transition z-60">
+    <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+  </button>
+  <img id="modalImage" src="" alt="Réalisation" class="max-w-full max-h-full object-contain rounded-lg" style="max-width: calc(100vw - 120px);" onclick="event.stopPropagation()">
 </div>
 
-<!-- Academic Page -->
 <div id="academic-page" class="page">
    <div class="fixed top-24 left-6 z-40">
      <button onclick="goToSection('projects')" class="btn-secondary flex items-center">
@@ -1499,7 +1765,7 @@
     secondary_color: '#9B85C7'
   };
   
-  const typingWords = ['étudiante', 'polyvalente', 'ambitieuse', 'créative', 'persévérante', 'sérieuse', 'curieuse', 'motivée'];
+  const typingWords = ['étudiante', 'polyvalente', 'autonome','ambitieuse', 'créative', 'persévérante', 'sérieuse', 'curieuse', 'motivée'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -1558,6 +1824,9 @@
       const wrapper = document.getElementById('app-wrapper');
       if (wrapper) wrapper.scrollTo(0, 0);
       window.scrollTo(0, 0);
+      
+      // Re-trigger scroll animations
+      setTimeout(initScrollReveal, 150);
     }
   }
 
@@ -1593,21 +1862,55 @@
     mobileMenu.classList.remove('active');
   }
   
+  let modalGallery = [];
+  let modalIndex = 0;
+
   function openModal(imageSrc) {
     const modal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
-    if (modal && modalImage) {
-      modalImage.src = imageSrc;
-      modal.style.display = 'flex';
-    }
+    if (!modal || !modalImage) return;
+
+    // Collect all images in the same grid/card as the clicked image
+    const allImgs = Array.from(document.querySelectorAll('.page.active [onclick*="openModal"]'));
+    modalGallery = allImgs.map(el => {
+      const m = el.getAttribute('onclick').match(/openModal\('([^']+)'\)/);
+      return m ? m[1] : null;
+    }).filter(Boolean);
+    modalIndex = modalGallery.indexOf(imageSrc);
+    if (modalIndex === -1) { modalGallery = [imageSrc]; modalIndex = 0; }
+
+    modalImage.src = imageSrc;
+    modal.style.display = 'flex';
+    updateModalArrows();
   }
-  
+
+  function updateModalArrows() {
+    const prev = document.getElementById('modalPrev');
+    const next = document.getElementById('modalNext');
+    if (prev) prev.style.display = modalGallery.length > 1 ? 'flex' : 'none';
+    if (next) next.style.display = modalGallery.length > 1 ? 'flex' : 'none';
+  }
+
+  function modalNav(dir) {
+    if (modalGallery.length <= 1) return;
+    modalIndex = (modalIndex + dir + modalGallery.length) % modalGallery.length;
+    document.getElementById('modalImage').src = modalGallery[modalIndex];
+  }
+
   function closeModal() {
     const modal = document.getElementById('imageModal');
-    if (modal) {
-      modal.style.display = 'none';
-    }
+    if (modal) modal.style.display = 'none';
+    modalGallery = [];
   }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    const modal = document.getElementById('imageModal');
+    if (!modal || modal.style.display === 'none') return;
+    if (e.key === 'ArrowRight') modalNav(1);
+    if (e.key === 'ArrowLeft') modalNav(-1);
+    if (e.key === 'Escape') closeModal();
+  });
 
   // Slideshow Functions
   function initSlideshow() {
@@ -1846,6 +2149,95 @@
   } else {
     onConfigChange(defaultConfig);
   }
+
+  /* ── Scroll reveal via IntersectionObserver ── */
+  function initScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-scale').forEach(el => {
+      observer.observe(el);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', initScrollReveal);
+  if (document.readyState !== 'loading') initScrollReveal();
+
+  /* ── Curseur halo ── */
+  (function() {
+    if (!window.matchMedia('(pointer: fine)').matches) return;
+    var dot  = document.getElementById('cursor-dot');
+    var halo = document.getElementById('cursor-halo');
+    if (!dot || !halo) return;
+
+    var mx = 0, my = 0, hx = 0, hy = 0;
+
+    document.addEventListener('mousemove', function(e) {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top  = my + 'px';
+      dot.classList.add('on');
+      halo.classList.add('on');
+    });
+
+    (function loop() {
+      hx += (mx - hx) * 0.08;
+      hy += (my - hy) * 0.08;
+      halo.style.left = hx + 'px';
+      halo.style.top  = hy + 'px';
+      requestAnimationFrame(loop);
+    })();
+
+    var sel = 'a, button, .card, .project-card, .tool-item, .passion-card, [onclick], img';
+    document.addEventListener('mouseover', function(e) {
+      if (e.target.closest(sel)) { dot.classList.add('magnetic'); halo.classList.add('magnetic'); }
+    });
+    document.addEventListener('mouseout', function(e) {
+      if (e.target.closest(sel)) { dot.classList.remove('magnetic'); halo.classList.remove('magnetic'); }
+    });
+    document.addEventListener('mouseleave', function() { dot.style.opacity='0'; halo.style.opacity='0'; });
+    document.addEventListener('mouseenter', function() { dot.style.opacity='1'; halo.style.opacity='1'; });
+  })();
+
+  /* ── Tooltips sur les outils ── */
+  document.querySelectorAll('.tool-item[data-tooltip]').forEach(function(item) {
+    const tip = document.createElement('div');
+    tip.className = 'tool-tooltip';
+    tip.textContent = item.getAttribute('data-tooltip');
+    item.appendChild(tip);
+  });
+
+  /* ── Bouton retour en haut ── */
+  const backBtn = document.getElementById('back-to-top');
+  function checkScroll() {
+    const scroll = (appWrapper && appWrapper.scrollTop) || window.scrollY;
+    if (backBtn) backBtn.classList.toggle('visible', scroll > 400);
+  }
+  if (appWrapper) appWrapper.addEventListener('scroll', checkScroll);
+  window.addEventListener('scroll', checkScroll);
+
+  /* ── Scroll progress bar ── */
+  const progressBar = document.getElementById('scroll-progress');
+  const appWrapper  = document.getElementById('app-wrapper');
+  function updateProgress() {
+    const el     = appWrapper || document.documentElement;
+    const scroll = el.scrollTop || window.scrollY;
+    const total  = (el.scrollHeight || document.body.scrollHeight) - (el.clientHeight || window.innerHeight);
+    const pct    = total > 0 ? (scroll / total) * 100 : 0;
+    if (progressBar) progressBar.style.width = pct + '%';
+  }
+  if (appWrapper) appWrapper.addEventListener('scroll', updateProgress);
+  window.addEventListener('scroll', updateProgress);
+
+  /* ── Disponibility popup ── */
+  setTimeout(function() {
+    const popup = document.getElementById('dispo-popup');
+    if (popup) popup.classList.add('show');
+  }, 1800);
+
 </script>
 </body>
 </html>
